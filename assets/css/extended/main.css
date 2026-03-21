@@ -1,0 +1,29 @@
+/* 核心设计：拉开呼吸感 */
+body {
+    font-family: "Inter", "Helvetica Neue", "PingFang SC", "Microsoft YaHei", sans-serif;
+    font-size: 18px;         
+    line-height: 1.9;       
+    letter-spacing: 0.01em;  
+    color: #1d1d1f;          
+}
+
+/* 标题设计：克制且有力 */
+h1, h2, h3 {
+    margin-top: 1.6em;
+    font-weight: 600;
+    letter-spacing: -0.01em; 
+}
+
+/* 文章列表：极致减法，只留细线 */
+.post-entry {
+    background: none !important;
+    border: none !important;
+    border-bottom: 0.5px solid #eeeeee !important; 
+    padding: 1.8rem 0 !important;
+    border-radius: 0 !important;
+}
+
+.post-entry:hover {
+    transform: none !important;
+    border-bottom: 0.5px solid #111 !important;
+}

@@ -1,15 +1,39 @@
 baseURL = 'https://zhoupenglong.com/'
 languageCode = 'zh-cn'
-title = '周鹏龙的个人空间'
+title = '鹏龙的学习之路'
 theme = 'PaperMod'
 
 [params]
-    defaultTheme = "auto"
-    displayFullPostContent = false
-    showCodeCopyButtons = true
+    # 开启动态标题，增加趣味性
+    title = "Penglong's Digital Garden" 
 
-[[menu.main]]
-    identifier = "posts"
-    name = "文章"
-    url = "/posts/"
-    weight = 10
+    # --- 核心：开启首页 Profile 模式 ---
+    [params.profileMode]
+        enabled = true
+        title = "你好，我是周鹏龙"
+        subtitle = "Less, but better. 记录教育观察、个人成长与愿意分享的一切。"
+        imageUrl = "/images/logo.png"
+        imageTitle = "Logo"
+        imageWidth = 150
+        imageHeight = 150
+
+        [[params.profileMode.buttons]]
+            name = "📚 阅读文章"
+            url = "posts"
+        
+        # --- 首页按钮：引导阅读 ---
+        [[params.profileMode.buttons]]
+            name = "📚 阅读文章"
+            url = "posts"
+        [[params.profileMode.buttons]]
+            name = "🧑‍💻 关于我"
+            url = "about"
+
+    # --- 社交图标：增加设计元素 ---
+    # Icon 名字可以在 https://simpleicons.org/ 找到
+    [[params.socialIcons]]
+        name = "github"
+        url = "https://github.com/your-username" # 替换为你的真实 GitHub
+    [[params.socialIcons]]
+        name = "wechat"
+        url = "posts/wechat-qr" # 引导到包含微信二维码的文章

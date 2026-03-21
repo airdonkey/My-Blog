@@ -4,10 +4,10 @@ title = '鹏龙的学习之路'
 theme = 'PaperMod'
 
 [params]
-    # 开启动态标题，增加趣味性
-    title = "Penglong's Digital Garden" 
-
-    # --- 核心：开启首页 Profile 模式 ---
+    # 网站基本描述
+    description = "Less, but better."
+    
+    # --- 首页 Profile 模式 ---
     [params.profileMode]
         enabled = true
         title = "你好，我是周鹏龙"
@@ -20,20 +20,23 @@ theme = 'PaperMod'
         [[params.profileMode.buttons]]
             name = "📚 阅读文章"
             url = "posts"
-        
-        # --- 首页按钮：引导阅读 ---
-        [[params.profileMode.buttons]]
-            name = "📚 阅读文章"
-            url = "posts"
+            
         [[params.profileMode.buttons]]
             name = "🧑‍💻 关于我"
             url = "about"
 
-    # --- 社交图标：增加设计元素 ---
-    # Icon 名字可以在 https://simpleicons.org/ 找到
+    # --- 社交图标 (注意：这个必须紧跟在 [params] 下，不能缩进在 profileMode 里) ---
     [[params.socialIcons]]
         name = "github"
-        url = "https://github.com/your-username" # 替换为你的真实 GitHub
+        url = "https://github.com/airdonkey" # 建议填你真实的 GitHub 链接
+    
     [[params.socialIcons]]
         name = "wechat"
-        url = "posts/wechat-qr" # 引导到包含微信二维码的文章
+        url = "posts/wechat-qr"
+
+# 这里可以放菜单设置
+[menu]
+    [[menu.main]]
+        name = "文章"
+        url = "posts"
+        weight = 10

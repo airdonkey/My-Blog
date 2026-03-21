@@ -6,6 +6,9 @@ theme = 'PaperMod'
 [params]
     # 网站基本描述
     description = "Less, but better."
+    # ... 其他设置 ...
+    assets.favicon = "/favicon.png"
+    copyright = "2026 鹏龙的学习之路 · All Rights Reserved."
     
     # --- 首页 Profile 模式 ---
     [params.profileMode]

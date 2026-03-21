@@ -10,12 +10,12 @@ theme = 'PaperMod'
     # --- 首页 Profile 模式 ---
     [params.profileMode]
         enabled = true
-        title = "你好，我是周鹏龙"
-        subtitle = "Less, but better. 记录教育观察、个人成长与愿意分享的一切。"
+        title = "你好，我是周鹏龙。"
+        subtitle = "Less, but better. | 记录教育观察、个人成长与愿意分享的一切。"
         imageUrl = "/images/logo.png"
         imageTitle = "Logo"
         imageWidth = 150
-        imageHeight = 150
+
 
         [[params.profileMode.buttons]]
             name = "📚 阅读文章"

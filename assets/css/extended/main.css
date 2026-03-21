@@ -1,4 +1,4 @@
-/* 核心设计：拉开呼吸感 */
+/* --- 基础排版：拉开呼吸感 --- */
 body {
     font-family: "Inter", "Helvetica Neue", "PingFang SC", "Microsoft YaHei", sans-serif;
     font-size: 18px;         
@@ -28,31 +28,48 @@ h1, h2, h3 {
     border-bottom: 0.5px solid #111 !important;
 }
 
-/* --- Profile 模式 Logo 智能适配 --- */
+/* --- Profile 首页模式定制 --- */
 
-/* 1. 基础样式（亮色/白天模式） */
+/* 1. Logo 适配：修复变形并增加阴影 */
 .profile_inner img {
-    background: transparent !important; /* 确保 PNG 透明背景显现 */
-    border: none !important;           /* 去掉任何默认边框 */
-    border-radius: 0 !important;       /* 保持 Logo 原始形状 */
+    background: transparent !important;
+    border: none !important;
+    border-radius: 0 !important;
+    margin-bottom: 20px;
     
-    margin-bottom: 25px;
+    /* 核心修复：强制比例 */
+    height: auto !important; 
+    width: 150px !important; 
+    object-fit: contain; 
     
-    /* 亮色模式下加一个极细微的深色投影，增加立体感 */
-    filter: drop-shadow(0 2px 4px rgba(0,0,0,0.08));
-    
-    transition: all 0.3s ease; /* 增加平滑过渡效果 */
+    filter: drop-shadow(0 4px 8px rgba(0,0,0,0.06));
+    transition: all 0.3s ease;
 }
 
 .profile_inner img:hover {
-    /* 悬停时 Logo 微微放大，产生交互感 */
-    transform: scale(1.03);
+    transform: scale(1.02);
 }
 
-/* 2. 暗色（夜晚）模式适配（核心魔法） */
+/* 2. 首页大标题：增强质感 */
+.profile_inner h1 {
+    font-size: 2.2rem;       
+    font-weight: 700;        
+    margin-top: 10px;        
+    margin-bottom: 12px;
+    letter-spacing: 0.02em;  
+    color: #1d1d1f;          
+}
+
+/* 3. 首页副标题：优化间距 */
+.profile_inner .subtitle {
+    font-size: 1.1rem;
+    color: #666;             
+    max-width: 600px;        
+    margin: 0 auto 35px auto;
+    line-height: 1.6;
+}
+
+/* 4. 暗色（夜晚）模式 Logo 适配 */
 .dark .profile_inner img {
-    /* 当切换到暗色模式时，紫红色 Logo 变暗。
-       我们给它加一个白色的 drop-shadow（外发光/光晕效果）。
-       这就像给 Logo 加上了一层月光，既保持了Logo的紫红色，又让它在黑底上清晰可见。 */
-    filter: drop-shadow(0 0 12px rgba(255, 255, 255, 0.55)) !important;
+    filter: drop-shadow(0 0 15px rgba(255, 255, 255, 0.5)) !important;
 }

@@ -1,0 +1,15 @@
+baseURL = 'https://zhoupenglong.com/'
+languageCode = 'zh-cn'
+title = '周鹏龙的个人空间'
+theme = 'PaperMod'
+
+[params]
+    defaultTheme = "auto"
+    displayFullPostContent = false
+    showCodeCopyButtons = true
+
+[[menu.main]]
+    identifier = "posts"
+    name = "文章"
+    url = "/posts/"
+    weight = 10

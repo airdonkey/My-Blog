@@ -1,21 +1,49 @@
-/* =========================================
-   ZHOU PENGLONG 个人博客终极 CSS 补丁
-   ========================================= */
+/* ============================================================
+   ZHOU PENGLONG 个人博客：全站昼夜自适应“大一统”方案
+   ============================================================ */
 
-/* --- 1. 基础文字与排版 --- */
-.post-content p {
-    letter-spacing: 0.02em;
-    line-height: 1.7;
+/* 1. 全局变量定义：一套代码，两个世界 */
+:root {
+    --main-text: #333;       /* 白天：深色字 */
+    --sub-text: #666;        /* 白天：引文/次要字 */
+    --dim-text: #999;        /* 白天：页脚/极淡字 */
+    --quote-bg: #f9f9f9;     /* 白天：引用块背景 */
+    --quote-border: #333;   /* 白天：引用块边框线 */
 }
 
-/* 强制修正 Markdown 中硬编码的 #333 颜色 (针对 About Me 开头那段) */
-.dark .post-content div[style*="color: #333"],
-.dark .post-content p[style*="color: #333"],
-.dark .post-content span[style*="color: #333"] {
-    color: #ccc !important; /* 黑夜模式下自动转为明亮的浅灰 */
+.dark {
+    --main-text: #e0e0e0;    /* 黑夜：明亮字 */
+    --sub-text: #b0b0b0;     /* 黑夜：温润灰 */
+    --dim-text: #888;        /* 黑夜：页脚可见灰 */
+    --quote-bg: #222222;     /* 黑夜：深色背景 */
+    --quote-border: #777;    /* 黑夜：中灰边框线 */
 }
 
-/* --- 2. 首页 Logo 适配 --- */
+/* 2. 核心：强制修复所有手动写的颜色 (针对 About/QR/文章引文) */
+/* 只要你在 HTML 里写了类似 #333, #555, #aaa，黑夜模式下统一被强制纠正 */
+.dark [style*="color: #333"], 
+.dark [style*="color: #555"], 
+.dark [style*="color: #666"],
+.dark [style*="color: #888"] {
+    color: var(--main-text) !important;
+}
+
+.dark [style*="color: #aaa"], 
+.dark [style*="color: #bbb"], 
+.dark [style*="color: #ccc"] {
+    color: var(--sub-text) !important;
+}
+
+/* 3. 引用块 (Blockquote) 全站适配：解决《淡蓝色的暗点》引文问题 */
+.post-content blockquote {
+    border-left: 2px solid var(--quote-border);
+    background: var(--quote-bg);
+    padding: 1.2em;
+    color: var(--sub-text);
+    margin: 1.5em 0;
+}
+
+/* 4. 首页 Logo 适配 (不变形逻辑) */
 .profile_inner .profile-img {
     width: 280px !important;
     height: auto !important;
@@ -24,60 +52,63 @@
     object-fit: contain !important;
     background: transparent !important;
     box-shadow: none !important;
-    transition: transform 0.4s ease;
-}
-.profile_inner .profile-img:hover {
-    transform: scale(1.02);
 }
 
-/* --- 3. 引用块 (Blockquote) 适配 --- */
-.post-content blockquote {
-    border-left: 2px solid #333;
-    background: #fdfdfd;
-    padding: 1.2em;
-    color: #555; /* 白天：中灰 */
-}
-
-.dark .post-content blockquote {
-    border-left-color: #888;
-    background: #2a2a2a; /* 黑夜：深灰背景 */
-    color: #bbb;         /* 黑夜：文字提亮 */
-}
-
-/* --- 4. 按钮与交互 --- */
-.button {
-    transition: all 0.3s ease;
-    border: 1px solid #ebebeb;
-    background: transparent;
-}
-.dark .button {
-    border-color: #444;
-}
-.button:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-}
-
-/* --- 5. 页脚与版权声明 --- */
+/* 5. 页脚与版权信息 */
 .footer {
     font-size: 11px;
     letter-spacing: 1px;
-    color: #999;
+    color: var(--dim-text);
 }
-.dark .footer {
-    color: #777; /* 稍微提亮一点 */
+.footer span:last-child { display: none; }
+
+/* 6. 其他视觉优化 */
+.post-content p { letter-spacing: 0.02em; line-height: 1.8; color: var(--main-text); }
+.post-content h1, .post-content h2, .post-content h3 { color: var(--main-text); }
+.post-content img { display: block; margin: 2em auto; border-radius: 4px; }
+
+/* 按钮交互 */
+.button {
+    transition: all 0.3s ease;
+    border: 1px solid #ebebeb;
 }
-.footer span:last-child {
-    display: none; /* 隐藏 Powered by */
+.dark .button { border-color: #444; }
+
+/* --- 8. 深度长引文 (Sagan Quote) 专属适配 --- */
+
+/* 定义引文专用色：比正文稍微浅一点，体现谦逊与厚重 */
+:root {
+    --quote-text-color: #444;    /* 白天：深灰 */
+    --caption-text-color: #888;  /* 白天：备注浅灰 */
 }
 
-/* --- 6. 图片自动居中 --- */
-.post-content img {
-    display: block;
-    margin: 1.5em auto;
+.dark {
+    --quote-text-color: #bbb;    /* 黑夜：柔和的亮灰 */
+    --caption-text-color: #777;  /* 黑夜：暗灰备注 */
 }
 
-/* --- 7. 关于我页面底部的三元组 (PEDAGOGY · RATIONALITY · COSMOS) --- */
-.dark div[style*="color: #aaa"] {
-    color: #888 !important;
+/* 引文容器 */
+.custom-quote {
+    font-size: 0.9em;
+    line-height: 1.8;
+    margin: 1.5em 2em;
+    padding-left: 1em;
+    border-left: 3px solid #d3d3d3;
+    /* 👇 核心：颜色随变量自动切换 👇 */
+    color: var(--quote-text-color) !important;
 }
+
+.dark .custom-quote {
+    border-left-color: #444; /* 黑夜下侧边线变深，不刺眼 */
+}
+
+/* 图片备注专用 */
+.photo-caption {
+    font-size: 0.8em;
+    margin-top: 0.8em;
+    color: var(--caption-text-color) !important;
+}
+
+/* 英文与中文的字体区分 */
+.quote-en { font-family: Georgia, serif; font-style: italic; margin-bottom: 0.5em; }
+.quote-zh { font-family: '楷体', KaiTi, STKaiti, serif; margin-bottom: 1.5em; }

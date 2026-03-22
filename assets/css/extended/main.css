@@ -2,113 +2,65 @@
    ZHOU PENGLONG 个人博客：全站昼夜自适应“大一统”方案
    ============================================================ */
 
-/* 1. 全局变量定义：一套代码，两个世界 */
 :root {
-    --main-text: #333;       /* 白天：深色字 */
-    --sub-text: #666;        /* 白天：引文/次要字 */
-    --dim-text: #999;        /* 白天：页脚/极淡字 */
-    --quote-bg: #f9f9f9;     /* 白天：引用块背景 */
-    --quote-border: #333;   /* 白天：引用块边框线 */
+    --text-main: #333;       /* 白天：正文深灰 */
+    --text-sub: #555;        /* 白天：引文灰 */
+    --text-dim: #888;        /* 白天：备注/页脚浅灰 */
+    --bg-quote: #fdfdfd;     /* 白天：引文背景 */
+    --border-quote: #d3d3d3; /* 白天：引文边框 */
 }
 
 .dark {
-    --main-text: #e0e0e0;    /* 黑夜：明亮字 */
-    --sub-text: #b0b0b0;     /* 黑夜：温润灰 */
-    --dim-text: #888;        /* 黑夜：页脚可见灰 */
-    --quote-bg: #222222;     /* 黑夜：深色背景 */
-    --quote-border: #777;    /* 黑夜：中灰边框线 */
+    --text-main: #e5e5e5;    /* 黑夜：正文亮白 */
+    --text-sub: #b5b5b5;     /* 黑夜：引文柔和灰 */
+    --text-dim: #777;        /* 黑夜：备注暗灰 */
+    --bg-quote: #252525;     /* 黑夜：引文背景深灰 */
+    --border-quote: #444;    /* 黑夜：引文边框暗色 */
 }
 
-/* 2. 核心：强制修复所有手动写的颜色 (针对 About/QR/文章引文) */
-/* 只要你在 HTML 里写了类似 #333, #555, #aaa，黑夜模式下统一被强制纠正 */
-.dark [style*="color: #333"], 
-.dark [style*="color: #555"], 
-.dark [style*="color: #666"],
-.dark [style*="color: #888"] {
-    color: var(--main-text) !important;
-}
-
-.dark [style*="color: #aaa"], 
-.dark [style*="color: #bbb"], 
-.dark [style*="color: #ccc"] {
-    color: var(--sub-text) !important;
-}
-
-/* 3. 引用块 (Blockquote) 全站适配：解决《淡蓝色的暗点》引文问题 */
-.post-content blockquote {
-    border-left: 2px solid var(--quote-border);
-    background: var(--quote-bg);
-    padding: 1.2em;
-    color: var(--sub-text);
-    margin: 1.5em 0;
-}
-
-/* 4. 首页 Logo 适配 (不变形逻辑) */
+/* 1. 首页 Logo 与层级适配 */
 .profile_inner .profile-img {
     width: 280px !important;
     height: auto !important;
     max-width: 90% !important;
     border-radius: 0 !important;
     object-fit: contain !important;
-    background: transparent !important;
     box-shadow: none !important;
 }
 
-/* 5. 页脚与版权信息 */
-.footer {
-    font-size: 11px;
-    letter-spacing: 1px;
-    color: var(--dim-text);
-}
+/* 2. 通用文字样式 */
+.post-content p { line-height: 1.8; letter-spacing: 0.02em; }
+.footer { font-size: 11px; color: var(--text-dim); }
 .footer span:last-child { display: none; }
 
-/* 6. 其他视觉优化 */
-.post-content p { letter-spacing: 0.02em; line-height: 1.8; color: var(--main-text); }
-.post-content h1, .post-content h2, .post-content h3 { color: var(--main-text); }
-.post-content img { display: block; margin: 2em auto; border-radius: 4px; }
-
-/* 按钮交互 */
-.button {
-    transition: all 0.3s ease;
-    border: 1px solid #ebebeb;
-}
-.dark .button { border-color: #444; }
-
-/* --- 8. 深度长引文 (Sagan Quote) 专属适配 --- */
-
-/* 定义引文专用色：比正文稍微浅一点，体现谦逊与厚重 */
-:root {
-    --quote-text-color: #444;    /* 白天：深灰 */
-    --caption-text-color: #888;  /* 白天：备注浅灰 */
+/* 3. About 页面专用类 */
+.about-intro {
+    font-family: '楷体', KaiTi, STKaiti, serif;
+    font-size: 1.1em;
+    line-height: 1.8;
+    text-align: justify;
+    margin: 2em 0;
+    color: var(--text-main) !important;
 }
 
-.dark {
-    --quote-text-color: #bbb;    /* 黑夜：柔和的亮灰 */
-    --caption-text-color: #777;  /* 黑夜：暗灰备注 */
-}
-
-/* 引文容器 */
+/* 4. 文章引文专用类 (针对卡尔·萨根长文) */
 .custom-quote {
     font-size: 0.9em;
     line-height: 1.8;
     margin: 1.5em 2em;
-    padding-left: 1em;
-    border-left: 3px solid #d3d3d3;
-    /* 👇 核心：颜色随变量自动切换 👇 */
-    color: var(--quote-text-color) !important;
+    padding: 1.2em 1.5em;
+    border-left: 3px solid var(--border-quote);
+    background: var(--bg-quote);
+    color: var(--text-sub) !important;
 }
+.custom-quote p, .custom-quote span { color: var(--text-sub) !important; }
+.quote-en { font-family: Georgia, serif; font-style: italic; margin-bottom: 0.6em; }
+.quote-zh { font-family: '楷体', KaiTi, STKaiti, serif; margin-bottom: 1.6em; }
 
-.dark .custom-quote {
-    border-left-color: #444; /* 黑夜下侧边线变深，不刺眼 */
-}
-
-/* 图片备注专用 */
+/* 5. 图片备注与扫码页文字 */
 .photo-caption {
     font-size: 0.8em;
     margin-top: 0.8em;
-    color: var(--caption-text-color) !important;
+    text-align: center;
+    color: var(--text-dim) !important;
 }
-
-/* 英文与中文的字体区分 */
-.quote-en { font-family: Georgia, serif; font-style: italic; margin-bottom: 0.5em; }
-.quote-zh { font-family: '楷体', KaiTi, STKaiti, serif; margin-bottom: 1.5em; }

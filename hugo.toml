@@ -1,6 +1,6 @@
 baseURL = 'https://zhoupenglong.com/'
 languageCode = 'zh-cn'
-title = '鹏龙的学习之路'
+title = 'ZHOU PENGLONG | My Learning Journey. | 鹏龙的学习之路。'
 theme = 'PaperMod'
 
 [params]
@@ -48,3 +48,45 @@ theme = 'PaperMod'
   [markup.goldmark]
     [markup.goldmark.renderer]
       unsafe = true
+
+/* 1. 隐藏页脚的 Powered by，只保留你的专属版权信息 */
+.footer span:last-child {
+    display: none;
+}
+
+/* 2. 极致的页脚排版：缩小字号，增加字间距，调浅颜色，体现克制感 */
+.footer {
+    font-size: 12px;
+    letter-spacing: 0.8px;
+    color: #999;
+}
+
+/* 3. 按钮的高级悬浮动画：去掉原本生硬的背景，改为上浮并出现柔和阴影 */
+.button {
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    box-shadow: none;
+    border: 1px solid #ebebeb; /* 极浅的边框 */
+}
+.button:hover {
+    transform: translateY(-2px); /* 鼠标放上去时微微上浮 */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05); /* 产生极为柔和的投影 */
+    background: transparent;
+}
+
+/* 4. 文本高亮定制：把默认刺眼的蓝色选中色，换成优雅的冷灰色 */
+::selection {
+    background: #e6e6e6;
+    color: #333;
+}
+::-moz-selection {
+    background: #e6e6e6;
+    color: #333;
+}
+
+/* 5. 头像微光效果：鼠标悬浮在紫色校徽上时，产生轻微的呼吸感 */
+.profile_inner .profile-img {
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+.profile_inner .profile-img:hover {
+    transform: scale(1.02);
+}

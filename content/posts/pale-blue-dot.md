@@ -5,8 +5,8 @@ draft: false
 tags: ["天文", "通识课", "科普"] # 可以自由增删标签
 categories: ["随笔", "课程"] # 可以自由增删分类
 # cover: 
-#   image: "/images/pale-blue-dot.jpg" # 如果你想在首页显示题图，把图片放到 static/images 目录下并取消这两行的注释
-#   alt: "旅行者一号拍摄的地球"
+image: "/images/pale-blue-dot.jpg" # 如果你想在首页显示题图，把图片放到 static/images 目录下并取消这两行的注释
+alt: "旅行者一号拍摄的地球"
 ---
 
 猫爸上学期假公济私攒了个天文通识课。假培养孩子之名，济个人兴趣之私。
@@ -35,7 +35,6 @@ categories: ["随笔", "课程"] # 可以自由增删分类
   <img src="/images/pale-blue-dot.jpg" alt="旅行者一号拍摄的暗淡蓝点" style="width: 100%; max-width: 600px; border-radius: 4px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
   <p style="font-size: 0.8em; color: #888; margin-top: 0.8em;">Photo by NASA via https://www.nasa.gov/feature/jpl/pale-blue-dot-revisited</p>
 </div>
-*Photo by NASA via https://www.nasa.gov/feature/jpl/pale-blue-dot-revisited*
 
 这是旅行者一号(Voyager 1)拍摄的著名照片之一，图中那个暗淡蓝点便是我们的地球，孤悬在宇宙漆黑的背景中。1994年，美国天文学家卡尔·萨根(Carl Sagan)在康奈尔大学发表公开演讲时说了以下这段话，多年来被广为引用：
 

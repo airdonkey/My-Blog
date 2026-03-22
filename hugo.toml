@@ -9,16 +9,9 @@ copyright = "Zhou Penglong. All Rights Reserved."
 [params]
     description = "探索教育创新的边界，分享跨文化视角的思考与沉淀。"
 
-# --- 浏览器标签页 Logo (Favicon) 设置 ---
-[params.assets]
-    favicon = "/favicon.png"
-    favicon16x16 = "/favicon.png"
-    favicon32x32 = "/favicon.png"
-    apple_touch_icon = "/favicon.png"
-
 # --- 极简左上角 Logo 设置 ---
 [params.label]
-    text = "ZHOU PENGLONG ." 
+    text = "ZHOU PENGLONG." 
 
 # --- 首页 Profile 模式 ---
 [params.profileMode]

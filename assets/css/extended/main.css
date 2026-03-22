@@ -37,9 +37,13 @@
     color: #333;
 }
 
-/* 5. 头像微光效果（去除强制变形代码，顺应原图比例） */
+/* 5. 头像微光效果 & 比例修复 */
 .profile_inner .profile-img {
     transition: transform 0.4s ease;
+    /* 👇 核心代码：强制图片按原比例显示，不拉伸，不充满，保持原样 👇 */
+    object-fit: contain !important; 
+    background: transparent !important; 
+    border-radius: 0 !important; /* 长方形图标不建议强制圆角，否则会切掉边缘 */
 }
 .profile_inner .profile-img:hover {
     transform: scale(1.02);
@@ -49,4 +53,29 @@
 .post-content img {
     display: block;
     margin: 0 auto;
+}
+
+/* About 页面专属的高级感排版 */
+.post-content h3 {
+    font-family: Georgia, "Times New Roman", serif;
+    font-weight: 400;
+    letter-spacing: 1px;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 0.5rem;
+    margin-top: 2.5rem;
+    color: #222;
+}
+
+.post-content blockquote {
+    border-left: 2px solid #333; /* 黑色细线，更有硬朗的专业感 */
+    background: #fdfdfd;
+    padding: 1.2em;
+    font-style: normal;
+    font-size: 0.95em;
+    color: #555;
+}
+
+/* 调整关于我页面的字间距 */
+.post-content p {
+    letter-spacing: 0.02em;
 }

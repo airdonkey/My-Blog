@@ -1,80 +1,51 @@
-/* --- 基础排版：拉开呼吸感 --- */
-body {
-    font-family: "Inter", "Helvetica Neue", "PingFang SC", "Microsoft YaHei", sans-serif;
-    font-size: 18px;         
-    line-height: 1.9;       
-    letter-spacing: 0.01em;  
-    color: #1d1d1f;          
+/* =========================================
+   个人博客专属定制 CSS (极简 & 高级感)
+   ========================================= */
+
+/* 1. 隐藏页脚的 Powered by，只保留专属版权信息 */
+.footer span:last-child {
+    display: none;
 }
 
-/* 标题设计：克制且有力 */
-h1, h2, h3 {
-    margin-top: 1.6em;
-    font-weight: 600;
-    letter-spacing: -0.01em; 
+/* 2. 极致的页脚排版：缩小字号，增加字间距，调浅颜色，体现克制感 */
+.footer {
+    font-size: 12px;
+    letter-spacing: 0.8px;
+    color: #999;
 }
 
-/* 文章列表：极致减法，只留细线 */
-.post-entry {
-    background: none !important;
-    border: none !important;
-    border-bottom: 0.5px solid #eeeeee !important; 
-    padding: 1.8rem 0 !important;
-    border-radius: 0 !important;
+/* 3. 按钮的高级悬浮动画：去掉原本生硬的背景，改为上浮并出现柔和阴影 */
+.button {
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    box-shadow: none;
+    border: 1px solid #ebebeb; /* 极浅的边框 */
+    background: transparent;
+}
+.button:hover {
+    transform: translateY(-2px); /* 鼠标放上去时微微上浮 */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05); /* 产生极为柔和的投影 */
+    background: transparent;
 }
 
-.post-entry:hover {
-    transform: none !important;
-    border-bottom: 0.5px solid #111 !important;
+/* 4. 文本高亮定制：把默认刺眼的蓝色选中色，换成优雅的冷灰色 */
+::selection {
+    background: #e6e6e6;
+    color: #333;
+}
+::-moz-selection {
+    background: #e6e6e6;
+    color: #333;
 }
 
-/* --- Profile 首页模式定制 --- */
-
-/* 1. Logo 适配：修复变形并增加阴影 */
-.profile_inner img {
-    background: transparent !important;
-    border: none !important;
-    border-radius: 0 !important;
-    margin-bottom: 20px;
-    
-    /* 核心修复：强制比例 */
-    height: auto !important; 
-    width: 150px !important; 
-    object-fit: contain; 
-    
-    filter: drop-shadow(0 4px 8px rgba(0,0,0,0.06));
-    transition: all 0.3s ease;
+/* 5. 头像微光效果：鼠标悬浮时产生轻微的呼吸感 */
+.profile_inner .profile-img {
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
 }
-
-.profile_inner img:hover {
+.profile_inner .profile-img:hover {
     transform: scale(1.02);
 }
 
-/* 2. 首页大标题：增强质感 */
-.profile_inner h1 {
-    font-size: 2.2rem;       
-    font-weight: 700;        
-    margin-top: 10px;        
-    margin-bottom: 12px;
-    letter-spacing: 0.02em;  
-    color: #1d1d1f;          
-}
-
-/* 3. 首页副标题：优化间距 */
-.profile_inner .subtitle {
-    font-size: 1.1rem;
-    color: #666;             
-    max-width: 600px;        
-    margin: 0 auto 35px auto;
-    line-height: 1.6;
-}
-
-/* 4. 暗色（夜晚）模式 Logo 适配 */
-.dark .profile_inner img {
-    filter: drop-shadow(0 0 15px rgba(255, 255, 255, 0.5)) !important;
-}
-
-/* 让文章内容中的图片自动居中 */
+/* 6. 让文章内容中的图片自动居中 */
 .post-content img {
     display: block;
     margin: 0 auto;

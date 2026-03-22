@@ -9,7 +9,7 @@ copyright = "Zhou Penglong. All Rights Reserved."
 
     # --- 左上角 Logo 文字 ---
     [params.label]
-        text = "ZHOU PENGLONG ."
+        text = "ZHOU PENGLONG."
 
     # --- 首页 Profile 模式 ---
     [params.profileMode]

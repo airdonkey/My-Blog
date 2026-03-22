@@ -1,9 +1,6 @@
 ---
-hidemeta: true  # 隐藏文章顶部的日期、作者等元数据
-showToc: false  # 关于我页面通常不需要目录
 title: "About | 关于我"
-layout: "single"
-url: "/about"
+url: "/about/"
 hidemeta: true
 showToc: false
 ---

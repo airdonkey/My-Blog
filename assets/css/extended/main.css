@@ -37,15 +37,13 @@
     color: #333;
 }
 
-/* 5. 头像微光效果 & 变形修复 */
+/* 5. 头像完美比例 & 微光效果 */
 .profile_inner .profile-img {
+    width: 150px !important;
+    height: 150px !important;
+    object-fit: cover !important; /* 核心魔法：像相框一样按比例裁切，绝不拉伸 */
+    border-radius: 50% !important; /* 强制完美正圆 */
     transition: transform 0.4s ease, box-shadow 0.4s ease;
-    /* 👇 【核心修复】强制高度按比例自动调整，防止拉伸 👇 */
-    height: auto !important; 
-    /* 👇 【核心修复】确保头像始终是完美的正圆 👇 */
-    border-radius: 50% !important; 
-    /* 👇 如果 PaperMod 加了 object-fit，这里确保它不干扰 👇 */
-    object-fit: cover; 
 }
 .profile_inner .profile-img:hover {
     transform: scale(1.02);

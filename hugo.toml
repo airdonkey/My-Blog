@@ -12,6 +12,9 @@ copyright = "Zhou Penglong. All Rights Reserved."
 # --- 浏览器标签页 Logo (Favicon) 设置 ---
 [params.assets]
     favicon = "/favicon.png"
+    favicon16x16 = "/favicon.png"
+    favicon32x32 = "/favicon.png"
+    apple_touch_icon = "/favicon.png"
 
 # --- 极简左上角 Logo 设置 ---
 [params.label]

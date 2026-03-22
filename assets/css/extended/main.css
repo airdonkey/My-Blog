@@ -37,13 +37,9 @@
     color: #333;
 }
 
-/* 5. 头像完美比例 & 微光效果 */
+/* 5. 头像微光效果（去除强制变形代码，顺应原图比例） */
 .profile_inner .profile-img {
-    width: 150px !important;
-    height: 150px !important;
-    object-fit: cover !important; /* 核心魔法：像相框一样按比例裁切，绝不拉伸 */
-    border-radius: 50% !important; /* 强制完美正圆 */
-    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    transition: transform 0.4s ease;
 }
 .profile_inner .profile-img:hover {
     transform: scale(1.02);

@@ -28,8 +28,6 @@ copyright = "Zhou Penglong. All Rights Reserved."
     imageUrl = "/images/logo.png"
     imageTitle = "Logo"
     imageWidth = 150
-    # ✅ 【修复2】加上这一行强制高度，Logo 绝对不会再拉伸变形！
-    imageHeight = 150 
 
     [[params.profileMode.buttons]]
         name = "📚 阅读文章"

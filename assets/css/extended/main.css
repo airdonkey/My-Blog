@@ -1,66 +1,61 @@
 /* ============================================================
-   ZHOU PENGLONG 个人博客：全站昼夜自适应“大一统”方案
+   ZHOU PENGLONG 个人博客：全天候自适应“全站强效”补丁
    ============================================================ */
 
 :root {
-    --text-main: #333;       /* 白天：正文深灰 */
-    --text-sub: #555;        /* 白天：引文灰 */
-    --text-dim: #888;        /* 白天：备注/页脚浅灰 */
-    --bg-quote: #fdfdfd;     /* 白天：引文背景 */
-    --border-quote: #d3d3d3; /* 白天：引文边框 */
+    --text-main: #333 !important;
+    --text-sub: #555 !important;
+    --text-dim: #888 !important;
+    --bg-quote: #fdfdfd !important;
+    --border-quote: #d3d3d3 !important;
 }
 
 .dark {
-    --text-main: #e5e5e5;    /* 黑夜：正文亮白 */
-    --text-sub: #b5b5b5;     /* 黑夜：引文柔和灰 */
-    --text-dim: #777;        /* 黑夜：备注暗灰 */
-    --bg-quote: #252525;     /* 黑夜：引文背景深灰 */
-    --border-quote: #444;    /* 黑夜：引文边框暗色 */
+    --text-main: #e5e5e5 !important; /* 强制亮白 */
+    --text-sub: #b5b5b5 !important;
+    --text-dim: #777 !important;
+    --bg-quote: #252525 !important;
+    --border-quote: #444 !important;
 }
 
-/* 1. 首页 Logo 与层级适配 */
+/* 1. 全局正文颜色强力接管 (解决你截图里的全黑问题) */
+.post-content { color: var(--text-main); }
+.dark .post-content { color: var(--text-main); }
+.dark .post-content p, .dark .post-content li, .dark .post-content div {
+    color: var(--text-main);
+}
+
+/* 2. 首页 Logo 适配 */
 .profile_inner .profile-img {
     width: 280px !important;
     height: auto !important;
     max-width: 90% !important;
     border-radius: 0 !important;
     object-fit: contain !important;
-    box-shadow: none !important;
 }
 
-/* 2. 通用文字样式 */
-.post-content p { line-height: 1.8; letter-spacing: 0.02em; }
-.footer { font-size: 11px; color: var(--text-dim); }
-.footer span:last-child { display: none; }
-
-/* 3. About 页面专用类 */
+/* 3. 关于我页面 - 开头楷体段落专用 */
 .about-intro {
     font-family: '楷体', KaiTi, STKaiti, serif;
-    font-size: 1.1em;
+    font-size: 1.15em;
     line-height: 1.8;
-    text-align: justify;
     margin: 2em 0;
     color: var(--text-main) !important;
 }
 
-/* 4. 文章引文专用类 (针对卡尔·萨根长文) */
+/* 4. 引文适配 (针对卡尔·萨根长文) */
 .custom-quote {
-    font-size: 0.9em;
-    line-height: 1.8;
+    font-size: 0.95em;
     margin: 1.5em 2em;
     padding: 1.2em 1.5em;
     border-left: 3px solid var(--border-quote);
     background: var(--bg-quote);
     color: var(--text-sub) !important;
 }
-.custom-quote p, .custom-quote span { color: var(--text-sub) !important; }
 .quote-en { font-family: Georgia, serif; font-style: italic; margin-bottom: 0.6em; }
 .quote-zh { font-family: '楷体', KaiTi, STKaiti, serif; margin-bottom: 1.6em; }
 
-/* 5. 图片备注与扫码页文字 */
-.photo-caption {
-    font-size: 0.8em;
-    margin-top: 0.8em;
-    text-align: center;
-    color: var(--text-dim) !important;
-}
+/* 5. 图片备注与页脚 */
+.photo-caption { font-size: 0.85em; text-align: center; color: var(--text-dim) !important; }
+.footer { font-size: 11px; color: var(--text-dim); padding: 2em 0; }
+.footer span:last-child { display: none; }

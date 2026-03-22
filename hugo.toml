@@ -8,13 +8,13 @@ theme = 'PaperMod'
     description = "Less, but better."
     # ... 其他设置 ...
     assets.favicon = "/favicon.png"
-    copyright = "2026 鹏龙的学习之路 · All Rights Reserved."
+    copyright = "Zhou Penglong. All Rights Reserved."
     
     # --- 首页 Profile 模式 ---
     [params.profileMode]
         enabled = true
         title = "你好，我是周鹏龙。"
-        subtitle = "Less, but better. | 记录教育观察、个人成长与愿意分享的一切。"
+        subtitle = "记录教育观察、个人成长及热爱的一切。"
         imageUrl = "/images/logo.png"
         imageTitle = "Logo"
         imageWidth = 150

@@ -3,20 +3,19 @@ languageCode = 'zh-cn'
 # 这是显示在浏览器标签页上的完整名字
 title = 'ZHOU PENGLONG | 周鹏龙' 
 theme = 'PaperMod'
+# ✅ 【修复1】版权声明必须放在最顶层！
+copyright = "Zhou Penglong. All Rights Reserved."
 
 [params]
     description = "探索教育创新的边界，分享跨文化视角的思考与沉淀。"
-    # 国际标准版权声明
-    copyright = "Zhou Penglong. All Rights Reserved."
 
 # --- 浏览器标签页 Logo (Favicon) 设置 ---
 [params.assets]
-    # 请确保你的 static 文件夹下有 favicon.png 这张图片
     favicon = "/favicon.png"
 
 # --- 极简左上角 Logo 设置 ---
 [params.label]
-    text = "ZHOU PENGLONG." # 加一个英文句号，克制且专业
+    text = "ZHOU PENGLONG ." 
 
 # --- 首页 Profile 模式 ---
 [params.profileMode]
@@ -26,6 +25,8 @@ theme = 'PaperMod'
     imageUrl = "/images/logo.png"
     imageTitle = "Logo"
     imageWidth = 150
+    # ✅ 【修复2】加上这一行强制高度，Logo 绝对不会再拉伸变形！
+    imageHeight = 150 
 
     [[params.profileMode.buttons]]
         name = "📚 阅读文章"
@@ -44,14 +45,12 @@ theme = 'PaperMod'
     name = "wechat"
     url = "/posts/wechat-qr/"
 
-# 这里可以放菜单设置
 [menu]
     [[menu.main]]
         name = "文章"
         url = "/posts/"
         weight = 10
 
-# 允许直接渲染 HTML 代码（用于支持我们之前的引文和图片排版）
 [markup]
   [markup.goldmark]
     [markup.goldmark.renderer]

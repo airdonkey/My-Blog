@@ -1,81 +1,56 @@
-/* =========================================
-   个人博客专属定制 CSS (极简 & 修复)
-   ========================================= */
-
-/* 1. 隐藏页脚的 Powered by，只保留专属版权信息 */
+/* 1. 隐藏页脚多余信息 */
 .footer span:last-child {
     display: none;
 }
 
-/* 2. 极致的页脚排版：缩小字号，增加字间距，调浅颜色，体现克制感 */
+/* 2. 页脚排版 */
 .footer {
     font-size: 12px;
     letter-spacing: 0.8px;
     color: #999;
 }
 
-/* 3. 按钮的高级悬浮动画 */
+/* 3. 按钮高级感交互 */
 .button {
-    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    transition: all 0.3s ease;
     box-shadow: none;
-    border: 1px solid #ebebeb; /* 极浅的边框 */
+    border: 1px solid #ebebeb;
     background: transparent;
 }
 .button:hover {
-    transform: translateY(-2px); /* 鼠标放上去时微微上浮 */
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05); /* 产生极为柔和的投影 */
-    background: transparent;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
 }
 
-/* 4. 文本高亮定制：改为优雅的冷灰色 */
-::selection {
-    background: #e6e6e6;
-    color: #333;
-}
-::-moz-selection {
-    background: #e6e6e6;
-    color: #333;
-}
-
-/* 5. 头像微光效果 & 比例修复 */
+/* 4. 首页 Logo 变形终极修复 */
 .profile_inner .profile-img {
+    width: 150px !important;    /* 固定宽度 */
+    height: auto !important;     /* 【关键】高度自适应，防止长方形被压扁 */
+    border-radius: 0 !important; /* 长方形徽章不建议强制圆角 */
+    object-fit: contain !important;
     transition: transform 0.4s ease;
-    /* 👇 核心代码：强制图片按原比例显示，不拉伸，不充满，保持原样 👇 */
-    object-fit: contain !important; 
-    background: transparent !important; 
-    border-radius: 0 !important; /* 长方形图标不建议强制圆角，否则会切掉边缘 */
 }
 .profile_inner .profile-img:hover {
     transform: scale(1.02);
 }
 
-/* 6. 让文章内容中的图片自动居中 */
-.post-content img {
-    display: block;
-    margin: 0 auto;
-}
-
-/* About 页面专属的高级感排版 */
+/* 5. About 页面及引文排版 */
 .post-content h3 {
-    font-family: Georgia, "Times New Roman", serif;
+    font-family: Georgia, serif;
     font-weight: 400;
-    letter-spacing: 1px;
     border-bottom: 1px solid #eee;
     padding-bottom: 0.5rem;
     margin-top: 2.5rem;
-    color: #222;
 }
-
 .post-content blockquote {
-    border-left: 2px solid #333; /* 黑色细线，更有硬朗的专业感 */
+    border-left: 2px solid #333;
     background: #fdfdfd;
     padding: 1.2em;
-    font-style: normal;
-    font-size: 0.95em;
-    color: #555;
 }
-
-/* 调整关于我页面的字间距 */
 .post-content p {
     letter-spacing: 0.02em;
+}
+.post-content img {
+    display: block;
+    margin: 0 auto;
 }

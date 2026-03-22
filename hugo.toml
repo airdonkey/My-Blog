@@ -1,50 +1,54 @@
 baseURL = 'https://zhoupenglong.com/'
 languageCode = 'zh-cn'
-# 这是显示在浏览器标签页上的完整名字
-title = 'ZHOU PENGLONG | 周鹏龙' 
+title = 'ZHOU PENGLONG | 周鹏龙'
 theme = 'PaperMod'
-# ✅ 【修复1】版权声明必须放在最顶层！
 copyright = "Zhou Penglong. All Rights Reserved."
 
 [params]
     description = "探索教育创新的边界，分享跨文化视角的思考与沉淀。"
 
-# --- 极简左上角 Logo 设置 ---
-[params.label]
-    text = "ZHOU PENGLONG." 
+    # --- 左上角 Logo 文字 ---
+    [params.label]
+        text = "ZHOU PENGLONG ."
 
-# --- 首页 Profile 模式 ---
-[params.profileMode]
-    enabled = true
-    title = "你好，我是周鹏龙。"
-    subtitle = "记录教育观察、个人成长及热爱的一切。"
-    imageUrl = "/images/logo.png"
-    imageTitle = "Logo"
-    imageWidth = 150
+    # --- 首页 Profile 模式 ---
+    [params.profileMode]
+        enabled = true
+        title = "你好，我是周鹏龙。"
+        subtitle = "记录教育观察、个人成长及热爱的一切。"
+        imageUrl = "/images/logo.png"
+        imageTitle = "Logo"
+        imageWidth = 150  # 只设置宽度，高度让 CSS 自动处理
 
-    [[params.profileMode.buttons]]
-        name = "📚 阅读文章"
-        url = "/posts/"
-        
-    [[params.profileMode.buttons]]
-        name = "🧑‍💻 关于我"
-        url = "/about/"
+        [[params.profileMode.buttons]]
+            name = "📚 阅读文章"
+            url = "/posts/"
+            
+        [[params.profileMode.buttons]]
+            name = "🧑‍💻 关于我"
+            url = "/about/"
 
-# --- 社交图标 ---
-[[params.socialIcons]]
-    name = "github"
-    url = "https://github.com/airdonkey" 
+    # --- 社交图标 ---
+    [[params.socialIcons]]
+        name = "github"
+        url = "https://github.com/airdonkey" 
     
-[[params.socialIcons]]
-    name = "wechat"
-    url = "/posts/wechat-qr/"
+    [[params.socialIcons]]
+        name = "wechat"
+        url = "/posts/wechat-qr/"
 
+# --- 菜单配置（必须在 params 块之外） ---
 [menu]
     [[menu.main]]
         name = "文章"
         url = "/posts/"
         weight = 10
+    [[menu.main]]
+        name = "关于"
+        url = "/about/"
+        weight = 20
 
+# --- 渲染设置 ---
 [markup]
   [markup.goldmark]
     [markup.goldmark.renderer]

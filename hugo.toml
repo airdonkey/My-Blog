@@ -43,3 +43,8 @@ theme = 'PaperMod'
         name = "文章"
         url = "posts"
         weight = 10
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true

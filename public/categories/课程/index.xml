@@ -1,20 +1,13 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>Posts on 鹏龙的学习之路</title>
-    <link>http://localhost:1313/posts/</link>
-    <description>Recent content in Posts on 鹏龙的学习之路</description>
+    <title>课程 on 鹏龙的学习之路</title>
+    <link>http://localhost:1313/categories/%E8%AF%BE%E7%A8%8B/</link>
+    <description>Recent content in 课程 on 鹏龙的学习之路</description>
     <generator>Hugo</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Sat, 21 Mar 2026 22:27:12 +1300</lastBuildDate>
-    <atom:link href="http://localhost:1313/posts/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Test</title>
-      <link>http://localhost:1313/posts/test/</link>
-      <pubDate>Sat, 21 Mar 2026 22:27:12 +1300</pubDate>
-      <guid>http://localhost:1313/posts/test/</guid>
-      <description></description>
-    </item>
+    <lastBuildDate>Mon, 17 Oct 2022 12:00:00 +0800</lastBuildDate>
+    <atom:link href="http://localhost:1313/categories/%E8%AF%BE%E7%A8%8B/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>淡蓝色的暗点</title>
       <link>http://localhost:1313/posts/pale-blue-dot/</link>
@@ -85,19 +78,6 @@
   &lt;p style=&#34;font-family: Georgia, serif; font-style: italic; margin-bottom: 0.5em;&#34;&gt;
     &#34;Look again at that dot. That&#39;s here. That&#39;s home. That&#39;s us. On it everyone you love, everyone you know, everyone you ever heard of, every human being who ever was, lived out their lives. The aggregate of our joy and suffering, thousands of confident religions, ideologies, and economic doctrines, every hunter and forager, every hero and coward, every creator and destroyer of civilization, every king and peasant, every young couple in love, every mother and father, hopeful child, inventor and explorer, every teacher of morals, every corrupt politician, every &#34;superstar,&#34; every &#34;supreme leader,&#34; every saint and sinner in the history of our species lived there--on a mote of dust suspended in a sunbeam.&#34;
   &lt;/p&gt;</description>
-    </item>
-    <item>
-      <title></title>
-      <link>http://localhost:1313/posts/my-first-post/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/my-first-post/</guid>
-      <description>&lt;p&gt;-&amp;ndash;&lt;/p&gt;
-&lt;p&gt;title: &amp;ldquo;我的第一篇文章&amp;rdquo;&lt;/p&gt;
-&lt;p&gt;date: 2026-03-21T22:00:00+08:00&lt;/p&gt;
-&lt;p&gt;draft: false&lt;/p&gt;
-&lt;p&gt;-&amp;ndash;&lt;/p&gt;
-&lt;p&gt;## 你好，世界！&lt;/p&gt;
-&lt;p&gt;这是我的第一个极客网站。&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

@@ -5,20 +5,29 @@ theme = 'PaperMod'
 copyright = "Zhou Penglong. All Rights Reserved."
 
 [params]
-    description = "探索教育创新的边界，分享跨文化视角的思考与沉淀。"
+    description = "探索教育创新的边界，分享跨文化视克的思考与沉淀。"
 
-    # --- 左上角 Logo 文字 ---
+    # --- 1. 社交图标 (放在最前面，确保全局生效) ---
+    [[params.socialIcons]]
+        name = "github"
+        url = "https://github.com/airdonkey" 
+    
+    [[params.socialIcons]]
+        name = "wechat"
+        url = "/posts/wechat-qr/"
+
+    # --- 2. 左上角文字 Logo ---
     [params.label]
-        text = "ZHOU PENGLONG."
+        text = "ZHOU PENGLONG ."
 
-    # --- 首页 Profile 模式 ---
+    # --- 3. 首页 Profile 模式 ---
     [params.profileMode]
         enabled = true
         title = "你好，我是周鹏龙。"
         subtitle = "记录教育观察、个人成长及热爱的一切。"
         imageUrl = "/images/logo.png"
         imageTitle = "Logo"
-        imageWidth = 150  # 只设置宽度，高度让 CSS 自动处理
+        imageWidth = 150  # 宽度由 TOML 控制
 
         [[params.profileMode.buttons]]
             name = "📚 阅读文章"
@@ -28,16 +37,7 @@ copyright = "Zhou Penglong. All Rights Reserved."
             name = "🧑‍💻 关于我"
             url = "/about/"
 
-    # --- 社交图标 ---
-    [[params.socialIcons]]
-        name = "github"
-        url = "https://github.com/airdonkey" 
-    
-    [[params.socialIcons]]
-        name = "wechat"
-        url = "/posts/wechat-qr/"
-
-# --- 菜单配置（必须在 params 块之外） ---
+# --- 4. 菜单配置 (必须在 [params] 块之外) ---
 [menu]
     [[menu.main]]
         name = "文章"
@@ -48,8 +48,6 @@ copyright = "Zhou Penglong. All Rights Reserved."
         url = "/about/"
         weight = 20
 
-# --- 渲染设置 ---
-[markup]
-  [markup.goldmark]
-    [markup.goldmark.renderer]
-      unsafe = true
+# --- 5. 其他设置 ---
+[markup.goldmark.renderer]
+    unsafe = true

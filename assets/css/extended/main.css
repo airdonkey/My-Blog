@@ -22,12 +22,20 @@
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
 }
 
-/* 4. 首页 Logo 变形终极修复 */
+/* 4. 首页 Logo 长方形徽章终极适配魔法 */
 .profile_inner .profile-img {
-    width: 150px !important;    /* 固定宽度 */
-    height: auto !important;     /* 【关键】高度自适应，防止长方形被压扁 */
-    border-radius: 0 !important; /* 长方形徽章不建议强制圆角 */
+    width: 280px !important;    /* 固定一个合理的宽度以适应白边图 */
+    
+    /* 👇 【核心魔法】让高度按照原图比例自动计算，绝不压扁 👇 */
+    height: auto !important;
+    
+    /* 👇 确保在手机上不会超出屏幕 (长宽高自适应核心) 👇 */
+    max-width: 90% !important;
+
+    border-radius: 0 !important; /* 长方形徽章坚决不能设圆角，更显硬朗专业 */
     object-fit: contain !important;
+    box-shadow: none !important; /* 去掉阴影，让白底融入背景，显得更高级 */
+    background: transparent !important;
     transition: transform 0.4s ease;
 }
 .profile_inner .profile-img:hover {

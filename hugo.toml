@@ -5,7 +5,7 @@ theme = 'PaperMod'
 copyright = "Zhou Penglong. All Rights Reserved."
 
 [params]
-    description = "探索教育创新的边界，分享跨文化视克的思考与沉淀。"
+    description = "探索教育创新的边界，分享跨文化视角的思考与沉淀。"
 
     # --- 1. 社交图标 (放在最前面，确保全局生效) ---
     [[params.socialIcons]]

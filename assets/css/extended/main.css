@@ -1,48 +1,56 @@
-/* 1. 隐藏页脚多余信息 */
+/* =========================================
+   个人博客专属定制 CSS (极简 & 昼夜自适应)
+   ========================================= */
+
+/* --- 1. 页脚排版 (全天候适配) --- */
+.footer {
+    font-size: 12px;
+    letter-spacing: 0.8px;
+    /* 白天：浅灰色 */
+    color: #888; 
+}
+.dark .footer {
+    /* 黑夜：中灰色，提高对比度 */
+    color: #ababab; 
+}
 .footer span:last-child {
     display: none;
 }
 
-/* 2. 页脚排版 */
-.footer {
-    font-size: 12px;
-    letter-spacing: 0.8px;
-    color: #999;
-}
-
-/* 3. 按钮高级感交互 */
+/* --- 2. 按钮高级感交互 --- */
 .button {
     transition: all 0.3s ease;
     box-shadow: none;
     border: 1px solid #ebebeb;
     background: transparent;
 }
+.dark .button {
+    border-color: #444; /* 黑夜模式下边框深一点 */
+}
 .button:hover {
     transform: translateY(-2px);
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
 }
 
-/* 4. 首页 Logo 长方形徽章终极适配魔法 */
+/* --- 3. 首页 Logo 比例修复 (全天候适配) --- */
 .profile_inner .profile-img {
-    width: 280px !important;    /* 固定一个合理的宽度以适应白边图 */
-    
-    /* 👇 【核心魔法】让高度按照原图比例自动计算，绝不压扁 👇 */
+    width: 280px !important;
     height: auto !important;
-    
-    /* 👇 确保在手机上不会超出屏幕 (长宽高自适应核心) 👇 */
     max-width: 90% !important;
-
-    border-radius: 0 !important; /* 长方形徽章坚决不能设圆角，更显硬朗专业 */
+    border-radius: 0 !important;
     object-fit: contain !important;
-    box-shadow: none !important; /* 去掉阴影，让白底融入背景，显得更高级 */
+    box-shadow: none !important;
     background: transparent !important;
     transition: transform 0.4s ease;
 }
-.profile_inner .profile-img:hover {
-    transform: scale(1.02);
-}
 
-/* 5. About 页面及引文排版 */
+/* --- 4. 文本高亮定制 --- */
+::selection { background: #e6e6e6; color: #333; }
+.dark ::selection { background: #444; color: #ddd; }
+
+/* --- 5. About 页面及正文排版 (昼夜色值修复) --- */
+
+/* 标题下方的横线 */
 .post-content h3 {
     font-family: Georgia, serif;
     font-weight: 400;
@@ -50,14 +58,37 @@
     padding-bottom: 0.5rem;
     margin-top: 2.5rem;
 }
+.dark .post-content h3 {
+    border-bottom-color: #333; /* 黑夜模式横线变暗 */
+}
+
+/* 引用块修复：解决灰字不可读问题 */
 .post-content blockquote {
     border-left: 2px solid #333;
     background: #fdfdfd;
     padding: 1.2em;
+    color: #555 !important; /* 强制覆盖白天颜色 */
 }
+.dark .post-content blockquote {
+    border-left-color: #777;
+    background: #252525; /* 黑夜模式背景加深 */
+    color: #bbb !important; /* 黑夜模式引用文字调亮 */
+}
+
+/* 强制修复 About 页面自定义 <div> 的颜色 */
+/* 这里的 !important 是为了覆盖你 Markdown 里写的内联 style="color: #333" */
+.post-content div[style*="color: #333"] {
+    color: #333 !important;
+}
+.dark .post-content div[style*="color: #333"] {
+    color: #ccc !important; /* 黑夜模式下，原本接近黑色的字转为浅灰 */
+}
+
 .post-content p {
     letter-spacing: 0.02em;
 }
+
+/* 图片自动居中 */
 .post-content img {
     display: block;
     margin: 0 auto;

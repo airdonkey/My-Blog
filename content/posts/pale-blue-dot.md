@@ -5,8 +5,8 @@ draft: false
 tags: ["天文", "通识课", "科普"] # 可以自由增删标签
 categories: ["随笔", "课程"] # 可以自由增删分类
 # cover: 
-image: "/images/pale-blue-dot.jpg" # 如果你想在首页显示题图，把图片放到 static/images 目录下并取消这两行的注释
-alt: "旅行者一号拍摄的地球"
+  image: "/images/pale-blue-dot.jpg" # 如果你想在首页显示题图，把图片放到 static/images 目录下并取消这两行的注释
+  alt: "旅行者一号拍摄的地球"
 ---
 
 猫爸上学期假公济私攒了个天文通识课。假培养孩子之名，济个人兴趣之私。

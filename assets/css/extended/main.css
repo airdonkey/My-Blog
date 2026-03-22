@@ -1,5 +1,5 @@
 /* =========================================
-   个人博客专属定制 CSS (极简 & 高级感)
+   个人博客专属定制 CSS (极简 & 修复)
    ========================================= */
 
 /* 1. 隐藏页脚的 Powered by，只保留专属版权信息 */
@@ -14,7 +14,7 @@
     color: #999;
 }
 
-/* 3. 按钮的高级悬浮动画：去掉原本生硬的背景，改为上浮并出现柔和阴影 */
+/* 3. 按钮的高级悬浮动画 */
 .button {
     transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
     box-shadow: none;
@@ -27,7 +27,7 @@
     background: transparent;
 }
 
-/* 4. 文本高亮定制：把默认刺眼的蓝色选中色，换成优雅的冷灰色 */
+/* 4. 文本高亮定制：改为优雅的冷灰色 */
 ::selection {
     background: #e6e6e6;
     color: #333;
@@ -37,9 +37,15 @@
     color: #333;
 }
 
-/* 5. 头像微光效果：鼠标悬浮时产生轻微的呼吸感 */
+/* 5. 头像微光效果 & 变形修复 */
 .profile_inner .profile-img {
     transition: transform 0.4s ease, box-shadow 0.4s ease;
+    /* 👇 【核心修复】强制高度按比例自动调整，防止拉伸 👇 */
+    height: auto !important; 
+    /* 👇 【核心修复】确保头像始终是完美的正圆 👇 */
+    border-radius: 50% !important; 
+    /* 👇 如果 PaperMod 加了 object-fit，这里确保它不干扰 👇 */
+    object-fit: cover; 
 }
 .profile_inner .profile-img:hover {
     transform: scale(1.02);

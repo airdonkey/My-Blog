@@ -7,6 +7,7 @@ categories: ["随笔", "课程"]
 cover: 
   image: "/images/pale-blue-dot.jpg" 
   alt: "旅行者一号拍摄的地球"
+  hidden: true 
 ---
 
 猫爸上学期假公济私攒了个天文通识课。假培养孩子之名，济个人兴趣之私。

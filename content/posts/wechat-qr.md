@@ -8,7 +8,7 @@ showToc: false
 <div style="text-align: center; margin-top: 3em;">
   
   <p class="about-intro" style="text-align: center;">
-    扫码添加微信。君子之交，期待有深度的交流。请注明来意及信源出处（来自官网）。
+    扫码添加微信。期待有深度的交流。请注明来意及信源出处（来自官网）。
   </p>
 
   <img src="/images/qrcode.jpg" alt="WeChat QR Code" 

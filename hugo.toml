@@ -7,6 +7,11 @@ copyright = "Zhou Penglong. All Rights Reserved."
 [params]
     description = "探索教育创新的边界，分享跨文化视角的思考与沉淀。"
 
+    # --- 0. 浏览器标签LOGO ---
+    [params.assets]
+        favicon = "/favicon.ico"
+        apple_touch_icon = "/apple-touch-icon.png"
+
     # --- 1. 社交图标 (放在最前面，确保全局生效) ---
     [[params.socialIcons]]
         name = "github"

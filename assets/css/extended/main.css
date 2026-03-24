@@ -64,3 +64,11 @@ body {
 .photo-caption { font-size: 0.85em; text-align: center; color: var(--tertiary) !important; }
 .footer { font-size: 11px; color: var(--tertiary) !important; padding: 2em 0; }
 .footer span:last-child { display: none; }
+
+/* 6. 正文图片全局居中与自适应 */
+.post-content img {
+    display: block;          /* 将图片转换为块级元素 */
+    margin: 0 auto;          /* 左右外边距自动平分，实现完美居中 */
+    max-width: 100%;         /* 防止高清大图撑破网页边界 */
+    border-radius: 6px;      /* 增加一点微圆角，让图片的视觉边缘更柔和、更现代 */
+}

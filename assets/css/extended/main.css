@@ -19,20 +19,20 @@ body {
 }
 
 /* 2. 首页 Logo 适配与【精准反色】 
-   注意：去掉了所有可能误伤二维码的全局 img 标签，严密锁定只反色头像/Logo 
+   直接锁定 img 标签，确保一定能命中首页中间的 LOGO 
 */
-.profile_inner .profile-img {
+.profile_inner img {
     width: 280px !important;
     height: auto !important;
     max-width: 90% !important;
     border-radius: 0 !important;
     object-fit: contain !important;
-    transition: filter 0.3s ease;
+    transition: filter 0.3s ease; /* 保持丝滑过渡 */
 }
 
-/* 仅在黑夜模式下，且仅针对 Profile Logo 反色 */
-.dark .profile_inner .profile-img {
-    filter: invert(1) hue-rotate(180deg);
+/* 仅在黑夜模式下，针对首页 LOGO 反色，并保持紫色色相、提升一点亮度 */
+.dark .profile_inner img {
+    filter: invert(1) hue-rotate(180deg) brightness(1.3);
 }
 
 /* 3. 关于我页面 - 开头楷体段落专用 */

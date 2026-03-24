@@ -18,21 +18,21 @@ body {
     transition: color 0.3s ease;
 }
 
-/* 2. 首页 Logo 适配与【精准反色】 
-   直接锁定 img 标签，确保一定能命中首页中间的 LOGO 
-*/
-.profile_inner img {
+/* 2. 首页 Logo 适配与【终极强制反色】 */
+.profile_inner img,
+.profile_inner svg {
     width: 280px !important;
     height: auto !important;
     max-width: 90% !important;
     border-radius: 0 !important;
     object-fit: contain !important;
-    transition: filter 0.3s ease; /* 保持丝滑过渡 */
+    transition: filter 0.3s ease !important;
 }
 
-/* 仅在黑夜模式下，针对首页 LOGO 反色，并保持紫色色相、提升一点亮度 */
-.dark .profile_inner img {
-    filter: invert(1) hue-rotate(180deg) brightness(1.3);
+/* 终极锁定：加上 body.dark 提升前缀优先级，涵盖 svg 格式，并加上 !important 强制核准 */
+body.dark .profile_inner img,
+body.dark .profile_inner svg {
+    filter: invert(1) hue-rotate(180deg) brightness(1.5) !important;
 }
 
 /* 3. 关于我页面 - 开头楷体段落专用 */

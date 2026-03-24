@@ -1,40 +1,55 @@
 /* ============================================================
-   ZHOU PENGLONG 个人博客：全天候自适应“全站强效”补丁
+   ZHOU PENGLONG 个人博客：全天候自适应“全站强效”补丁 (修复暗黑模式版)
    ============================================================ */
 
+/* 0. 全局基础排版 (地基) */
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Noto Sans SC", sans-serif;
+}
+
+/* 1. 核心颜色变量定义 (绝对不能在这里用 !important) */
 :root {
-    --text-main: #333 !important;
-    --text-sub: #555 !important;
-    --text-dim: #888 !important;
-    --bg-quote: #fdfdfd !important;
-    --border-quote: #d3d3d3 !important;
+    --text-main: #333;
+    --text-sub: #555;
+    --text-dim: #888;
+    --bg-quote: #fdfdfd;
+    --border-quote: #d3d3d3;
 }
 
+/* 当切换到暗黑模式时，系统会自动替换上面的变量值 */
 .dark {
-    --text-main: #e5e5e5 !important; /* 强制亮白 */
-    --text-sub: #b5b5b5 !important;
-    --text-dim: #777 !important;
-    --bg-quote: #252525 !important;
-    --border-quote: #444 !important;
+    --text-main: #e5e5e5;
+    --text-sub: #b5b5b5;
+    --text-dim: #999;
+    --bg-quote: #252525;
+    --border-quote: #444;
 }
 
-/* 1. 全局正文颜色强力接管 (解决你截图里的全黑问题) */
-.post-content { color: var(--text-main); }
-.dark .post-content { color: var(--text-main); }
-.dark .post-content p, .dark .post-content li, .dark .post-content div {
-    color: var(--text-main);
+/* 2. 正文颜色强力接管 (只在这里使用 !important 覆盖 PaperMod 默认样式) */
+.post-content,
+.post-content p,
+.post-content li,
+.post-content div {
+    color: var(--text-main) !important;
+    transition: color 0.3s ease; /* 添加平滑变色过渡效果 */
 }
 
-/* 2. 首页 Logo 适配 */
+/* 3. 首页 Logo 适配与【自动反色】 */
 .profile_inner .profile-img {
     width: 280px !important;
     height: auto !important;
     max-width: 90% !important;
     border-radius: 0 !important;
     object-fit: contain !important;
+    transition: filter 0.3s ease; /* 让反色过程有动画过渡，不突兀 */
 }
 
-/* 3. 关于我页面 - 开头楷体段落专用 */
+/* 触发自动反色！ */
+.dark .profile_inner .profile-img {
+    filter: invert(1) hue-rotate(180deg);
+}
+
+/* 4. 关于我页面 - 开头楷体段落专用 */
 .about-intro {
     font-family: '楷体', KaiTi, STKaiti, serif;
     font-size: 1.15em;
@@ -43,29 +58,20 @@
     color: var(--text-main) !important;
 }
 
-/* 4. 引文适配 (针对卡尔·萨根长文) */
+/* 5. 引文适配 (针对卡尔·萨根长文等) */
 .custom-quote {
     font-size: 0.95em;
     margin: 1.5em 2em;
     padding: 1.2em 1.5em;
-    border-left: 3px solid var(--border-quote);
-    background: var(--bg-quote);
+    border-left: 3px solid var(--border-quote) !important;
+    background: var(--bg-quote) !important;
     color: var(--text-sub) !important;
+    transition: background 0.3s ease, border-color 0.3s ease, color 0.3s ease;
 }
 .quote-en { font-family: Georgia, serif; font-style: italic; margin-bottom: 0.6em; }
 .quote-zh { font-family: '楷体', KaiTi, STKaiti, serif; margin-bottom: 1.6em; }
 
-/* 5. 图片备注与页脚 */
+/* 6. 图片备注与页脚 */
 .photo-caption { font-size: 0.85em; text-align: center; color: var(--text-dim) !important; }
-.footer { font-size: 11px; color: var(--text-dim); padding: 2em 0; }
+.footer { font-size: 11px; color: var(--text-dim) !important; padding: 2em 0; }
 .footer span:last-child { display: none; }
-
-/* 自定义全局字体，优化中文显示 */
-body {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Noto Sans SC", sans-serif;
-}
-
-/* 黑夜模式下 LOGO 自动反色，并保持彩色部分色相不变 */
-.dark .profile_inner .profile-img {
-    filter: invert(1) hue-rotate(180deg);
-}

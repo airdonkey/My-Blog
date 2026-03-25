@@ -1,6 +1,6 @@
 ---
 title: "About | 关于我"
-url: "/about/"
+translationKey: "about"
 hidemeta: true
 showToc: false
 ---
@@ -34,7 +34,7 @@ showToc: false
 
 <script>
   document.getElementById('email-link').addEventListener('click', function(e) {
-    e.preventDefault(); // 阻止默认的 # 跳转
+    e.preventDefault(); 
     const user = 'contact';
     const domain = 'zhoupenglong.com';
     window.location.href = 'mailto:' + user + '@' + domain;

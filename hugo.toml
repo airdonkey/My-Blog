@@ -5,7 +5,7 @@ theme = 'PaperMod'
 copyright = "Zhou Penglong. All Rights Reserved."
 
 [markup.goldmark.renderer]
-    unsafe = true # 允许在 Markdown 中写入 HTML 和 JS (防垃圾邮件必需)
+    unsafe = true
 
 [params]
     # --- 0. 浏览器标签LOGO ---
@@ -18,12 +18,12 @@ copyright = "Zhou Penglong. All Rights Reserved."
         text = "ZHOU PENGLONG ."
 
 # ==========================================
-# 多语言配置区 (右上角会自动出现语言切换按钮)
+# 多语言顶级路由配置区
 # ==========================================
 
-# --- 中文配置 (ZH) ---
+# --- 中文配置 (默认路径 / ) ---
 [languages.zh-cn]
-    languageName = "ZH" # 按钮上显示的文字
+    languageName = "ZH"
     title = 'ZHOU PENGLONG | 周鹏龙'
     weight = 1
     
@@ -52,7 +52,7 @@ copyright = "Zhou Penglong. All Rights Reserved."
         url = "/about/"
         weight = 20
 
-# --- 英文配置 (EN) ---
+# --- 英文配置 (自动生成路径 /en/ ) ---
 [languages.en]
     languageName = "EN"
     title = 'ZHOU PENGLONG'
@@ -72,7 +72,7 @@ copyright = "Zhou Penglong. All Rights Reserved."
                 url = "/posts/"
             [[languages.en.params.profileMode.buttons]]
                 name = "🧑‍💻 About"
-                url = "/about/"
+                url = "/about/" # 注意：主页按钮的链接，Hugo会自动在英文模式下跳转到 /en/about/
                 
     [[languages.en.menu.main]]
         name = "Posts"
@@ -80,5 +80,5 @@ copyright = "Zhou Penglong. All Rights Reserved."
         weight = 10
     [[languages.en.menu.main]]
         name = "About"
-        url = "/about/"
+        url = "/about/" # 菜单链接同理，写 /about/ 即可，Hugo 英文环境下会自动套用 /en/about/
         weight = 20

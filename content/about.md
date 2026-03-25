@@ -1,11 +1,13 @@
 ---
 title: "About | 关于我"
+slug: "about"
+translationKey: "about-page"
 hidemeta: true
 showToc: false
 ---
 
 <div class="about-intro" style="line-height: 1.8; margin-bottom: 3em;">
-  <p>1983 年生于福建泉州，长于永安，现定居新西兰。</p>
+  <p>1983 年生于福建泉州，长于永安的国企大院，现定居新西兰。</p>
   <p>我曾穿行于金融行业的繁杂数据与跨境逻辑，后安身于南半球的教室与讲台。地理坐标与职业身份的更迭，本质上是观察世界视角的转换：从审视资本的流动，到见证认知的生长。</p>
 </div>
 

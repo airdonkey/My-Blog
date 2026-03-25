@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>ZHOU PENGLONG</title>
+    <link>http://localhost:1313/en/</link>
+    <description>Recent content on ZHOU PENGLONG</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <copyright>Zhou Penglong. All Rights Reserved.</copyright>
+    <atom:link href="http://localhost:1313/en/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>About Me</title>
+      <link>http://localhost:1313/en/about/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/en/about/</guid>
+      <description>&lt;div class=&#34;about-intro&#34; style=&#34;line-height: 1.8; margin-bottom: 3em; font-family: -apple-system, BlinkMacSystemFont, &#39;Segoe UI&#39;, Roboto, &#39;Helvetica Neue&#39;, Arial, sans-serif; letter-spacing: normal;&#34;&gt;
+  &lt;p&gt;Born in 1983 in Quanzhou, Fujian, China, raised in a state-owned enterprise compound in Yong&#39;an, and currently settled in New Zealand.&lt;/p&gt;
+  &lt;p&gt;I once navigated the complex data and cross-border logic of the financial industry before anchoring myself in a classroom in the Southern Hemisphere. The shift in geographical coordinates and professional identity is essentially a shift in how I observe the world: from scrutinizing the flow of capital to witnessing the growth of cognition.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

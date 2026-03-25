@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>课程 on 鹏龙的学习之路</title>
+    <title>课程 on ZHOU PENGLONG | 周鹏龙</title>
     <link>http://localhost:1313/categories/%E8%AF%BE%E7%A8%8B/</link>
-    <description>Recent content in 课程 on 鹏龙的学习之路</description>
+    <description>Recent content in 课程 on ZHOU PENGLONG | 周鹏龙</description>
     <generator>Hugo</generator>
     <language>zh-cn</language>
+    <copyright>Zhou Penglong. All Rights Reserved.</copyright>
     <lastBuildDate>Mon, 17 Oct 2022 12:00:00 +0800</lastBuildDate>
     <atom:link href="http://localhost:1313/categories/%E8%AF%BE%E7%A8%8B/index.xml" rel="self" type="application/rss+xml" />
     <item>
@@ -53,31 +54,28 @@
       &lt;/tr&gt;
       &lt;tr&gt;
           &lt;td style=&#34;text-align: left&#34;&gt;太阳系之天王星和海王星&lt;/td&gt;
-          &lt;td style=&#34;text-align: left&#34;&gt;学习天王星和海王星的物理特点和运动特点，了解天王星和海王星的发现历史。&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;学习天王星和海王星的物理特点和运动特点。&lt;/td&gt;
       &lt;/tr&gt;
       &lt;tr&gt;
           &lt;td style=&#34;text-align: left&#34;&gt;太阳系之矮行星和小行星&lt;/td&gt;
-          &lt;td style=&#34;text-align: left&#34;&gt;学习太阳系小天体的物理特点和运动特点以及人类探索历史。&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;学习太阳系小天体的物理特点和运动特点。&lt;/td&gt;
       &lt;/tr&gt;
       &lt;tr&gt;
           &lt;td style=&#34;text-align: left&#34;&gt;太阳系之彗星和流星&lt;/td&gt;
-          &lt;td style=&#34;text-align: left&#34;&gt;学习太阳系彗星的物理特点和运动特点以及彗星和流星的关系。&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;学习太阳系彗星的物理特点以及其与流星的关系。&lt;/td&gt;
       &lt;/tr&gt;
   &lt;/tbody&gt;
 &lt;/table&gt;
-&lt;p&gt;第二趟银河铁道列车出发前，我想再吆喝两声，虽然仍旧来得有点晚。&lt;/p&gt;
 &lt;p&gt;世事扰攘，眼前已有数不清的烦恼需要劳神，我们为什么还非得关心那远方的微光呢？
 我想借用一张照片和一段话试着解释。&lt;/p&gt;
 &lt;div style=&#34;text-align: center; margin: 2em 0;&#34;&gt;
-  &lt;img src=&#34;http://localhost:1313/images/pale-blue-dot.jpg&#34; alt=&#34;旅行者一号拍摄的暗淡蓝点&#34; style=&#34;width: 100%; max-width: 600px; border-radius: 4px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);&#34;&gt;
-  &lt;p style=&#34;font-size: 0.8em; color: #888; margin-top: 0.8em;&#34;&gt;Photo by NASA via https://www.nasa.gov/feature/jpl/pale-blue-dot-revisited&lt;/p&gt;
+  &lt;img src=&#34;http://localhost:1313/images/pale-blue-dot.jpg&#34; alt=&#34;旅行者一号拍摄的暗淡蓝点&#34; 
+       style=&#34;width: 100%; max-width: 600px; border-radius: 4px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);&#34;&gt;
+  &lt;p class=&#34;photo-caption&#34;&gt;Photo by NASA via https://www.nasa.gov/feature/jpl/pale-blue-dot-revisited&lt;/p&gt;
 &lt;/div&gt;
-*Photo by NASA via https://www.nasa.gov/feature/jpl/pale-blue-dot-revisited*
 &lt;p&gt;这是旅行者一号(Voyager 1)拍摄的著名照片之一，图中那个暗淡蓝点便是我们的地球，孤悬在宇宙漆黑的背景中。1994年，美国天文学家卡尔·萨根(Carl Sagan)在康奈尔大学发表公开演讲时说了以下这段话，多年来被广为引用：&lt;/p&gt;
-&lt;div style=&#34;font-size: 0.9em; line-height: 1.8; margin: 1.5em 2em; padding-left: 1em; border-left: 3px solid #d3d3d3; color: #444;&#34;&gt;
-  &lt;p style=&#34;font-family: Georgia, serif; font-style: italic; margin-bottom: 0.5em;&#34;&gt;
-    &#34;Look again at that dot. That&#39;s here. That&#39;s home. That&#39;s us. On it everyone you love, everyone you know, everyone you ever heard of, every human being who ever was, lived out their lives. The aggregate of our joy and suffering, thousands of confident religions, ideologies, and economic doctrines, every hunter and forager, every hero and coward, every creator and destroyer of civilization, every king and peasant, every young couple in love, every mother and father, hopeful child, inventor and explorer, every teacher of morals, every corrupt politician, every &#34;superstar,&#34; every &#34;supreme leader,&#34; every saint and sinner in the history of our species lived there--on a mote of dust suspended in a sunbeam.&#34;
-  &lt;/p&gt;</description>
+&lt;div class=&#34;custom-quote&#34;&gt;
+  &lt;p class=&#34;quote-en&#34;&gt;&#34;Look again at that dot. That&#39;s here. That&#39;s home. That&#39;s us. On it everyone you love, everyone you know, everyone you ever heard of, every human being who ever was, lived out their lives. The aggregate of our joy and suffering, thousands of confident religions, ideologies, and economic doctrines, every hunter and forager, every hero and coward, every creator and destroyer of civilization, every king and peasant, every young couple in love, every mother and father, hopeful child, inventor and explorer, every teacher of morals, every corrupt politician, every &#34;superstar,&#34; every &#34;supreme leader,&#34; every saint and sinner in the history of our species lived there--on a mote of dust suspended in a sunbeam.&#34;&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

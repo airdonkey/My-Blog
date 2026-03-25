@@ -52,7 +52,7 @@ copyright = "Zhou Penglong. All Rights Reserved."
         url = "/about/"
         weight = 20
 
-# --- 英文配置 (自动生成路径 /en/ ) ---
+# --- 英文配置 (生成路径 /en/ ) ---
 [languages.en]
     languageName = "EN"
     title = 'ZHOU PENGLONG'
@@ -69,16 +69,16 @@ copyright = "Zhou Penglong. All Rights Reserved."
             imageWidth = 150
             [[languages.en.params.profileMode.buttons]]
                 name = "📚 Posts"
-                url = "/posts/"
+                url = "/en/posts/"   # 这里的 /en/ 路径已修复
             [[languages.en.params.profileMode.buttons]]
                 name = "🧑‍💻 About"
-                url = "/about/" # 注意：主页按钮的链接，Hugo会自动在英文模式下跳转到 /en/about/
+                url = "/en/about/"   # 这里的 /en/ 路径已修复
                 
     [[languages.en.menu.main]]
         name = "Posts"
-        url = "/posts/"
+        url = "/en/posts/"       # 这里的 /en/ 路径已修复
         weight = 10
     [[languages.en.menu.main]]
         name = "About"
-        url = "/about/" # 菜单链接同理，写 /about/ 即可，Hugo 英文环境下会自动套用 /en/about/
+        url = "/en/about/"       # 这里的 /en/ 路径已修复
         weight = 20

@@ -1,6 +1,5 @@
 ---
 title: "About | 关于我"
-translationKey: "about"
 hidemeta: true
 showToc: false
 ---

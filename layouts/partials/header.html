@@ -1,0 +1,94 @@
+{{- /* theme-vars */ -}}
+{{- $isMulti := gt (len $.Site.Languages) 1 -}}
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            {{- $label_text := ($.Site.Params.label.text | default $.Site.Title) -}}
+            {{- if $.Site.Title }}
+            <a href="{{ "" | absLangURL }}" accesskey="h" title="{{ $label_text }} (Alt + H)">
+                {{- if $.Site.Params.label.icon }}
+                    {{- $img := resources.Get $.Site.Params.label.icon -}}
+                    {{- if $img }}
+                        {{- $iconHeight := $.Site.Params.label.iconHeight | default "30" -}}
+                        <img src="{{ $img.Permalink }}" alt="" aria-label="logo" height="{{ $iconHeight }}">
+                    {{- else }}
+                        {{- $iconHeight := $.Site.Params.label.iconHeight | default "30" -}}
+                        <img src="{{ $.Site.Params.label.icon | absURL }}" alt="" aria-label="logo" height="{{ $iconHeight }}">
+                    {{- end }}
+                {{- else if hasPrefix $.Site.Params.label.iconSVG "<svg" }}
+                    {{ $.Site.Params.label.iconSVG | safeHTML }}
+                {{- end }}
+                {{- $label_text -}}
+            </a>
+            {{- end }}
+            
+            <div class="logo-switches">
+                {{- if (not $.Site.Params.disableThemeToggle) }}
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+                {{- end }}
+
+                {{- $lang := .Lang }}
+                {{- $separator := or $label_text (not $.Site.Params.disableThemeToggle) }}
+                {{- if $isMulti }}
+                <ul class="lang-switch">
+                    {{- if $separator }}<li>|</li>{{ end }}
+                    {{- $currentPage := . }}
+                    {{- range $.Site.Languages }}
+                        {{- $targetLang := .Lang }}
+                        {{- if ne $lang $targetLang }}
+                            {{- $targetPage := false }}
+                            {{- range $currentPage.Translations }}
+                                {{- if eq .Lang $targetLang }}{{ $targetPage = . }}{{ end }}
+                            {{- end }}
+                            {{- if and (not $targetPage) $currentPage.Params.translationKey }}
+                                {{- $key := $currentPage.Params.translationKey }}
+                                {{- range $.Site.Sites }}
+                                    {{- if eq .Lang $targetLang }}
+                                        {{- range .Pages }}
+                                            {{- if eq .Params.translationKey $key }}{{ $targetPage = . }}{{ end }}
+                                        {{- end }}
+                                    {{- end }}
+                                {{- end }}
+                            {{- end }}
+                            {{- if $targetPage }}
+                            <li>
+                                <a href="{{ $targetPage.Permalink }}" title="{{ .LanguageName }}" aria-label="{{ .LanguageName }}">
+                                    {{- .LanguageName | emojify -}}
+                                </a>
+                            </li>
+                            {{- else }}
+                            <li>
+                                <span style="opacity: 0.4; cursor: not-allowed;" title="No translation">{{ .LanguageName | emojify }}</span>
+                            </li>
+                            {{- end }}
+                        {{- end }}
+                    {{- end }}
+                </ul>
+                {{- end }}
+            </div>
+        </div>
+        
+        {{- $currentPage := . }}
+        <ul id="menu">
+            {{- range $.Site.Menus.main }}
+            {{- $menu_item_url := (cond (strings.HasSuffix .URL "/") .URL (printf "%s/" .URL) ) | absLangURL }}
+            {{- $page_url := $currentPage.Permalink | absLangURL }}
+            <li>
+                <a href="{{ .URL | absLangURL }}" title="{{ .Title | default .Name }}">
+                    <span {{- if eq $menu_item_url $page_url }} class="active" {{- end }}>
+                        {{- .Pre }}
+                        {{- .Name -}}
+                        {{- .Post -}}
+                    </span>
+                </a>
+            </li>
+            {{- end }}
+        </ul>
+    </nav>
+</header>

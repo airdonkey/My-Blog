@@ -1,58 +1,84 @@
 baseURL = 'https://www.zhoupenglong.com/'
-languageCode = 'zh-cn'
-title = 'ZHOU PENGLONG | 周鹏龙'
+# 默认语言设为中文
+defaultContentLanguage = 'zh-cn'
 theme = 'PaperMod'
 copyright = "Zhou Penglong. All Rights Reserved."
 
-[params]
-    description = "探索教育创新的边界，分享跨文化视角的思考与沉淀。"
+[markup.goldmark.renderer]
+    unsafe = true # 允许在 Markdown 中写入 HTML 和 JS (防垃圾邮件必需)
 
+[params]
     # --- 0. 浏览器标签LOGO ---
     [params.assets]
         favicon = "/favicon.ico"
         apple_touch_icon = "/apple-touch-icon.png"
 
-    # --- 1. 社交图标 (放在最前面，确保全局生效) ---
-    [[params.socialIcons]]
-        name = "github"
-        url = "https://github.com/airdonkey" 
-    
-    [[params.socialIcons]]
-        name = "wechat"
-        url = "/posts/wechat-qr/"
-
-    # --- 2. 左上角文字 Logo ---
+    # --- 1. 左上角文字 Logo ---
     [params.label]
         text = "ZHOU PENGLONG ."
 
-    # --- 3. 首页 Profile 模式 ---
-    [params.profileMode]
-        enabled = true
-        title = "你好，我是周鹏龙。"
-        subtitle = "记录教育观察、个人成长及热爱的一切。"
-        imageUrl = "/images/logo.png"
-        imageTitle = "Logo"
-        imageWidth = 150  # 宽度由 TOML 控制
+# ==========================================
+# 多语言配置区 (右上角会自动出现语言切换按钮)
+# ==========================================
 
-        [[params.profileMode.buttons]]
-            name = "📚 阅读文章"
-            url = "/posts/"
-            
-        [[params.profileMode.buttons]]
-            name = "🧑‍💻 关于我"
-            url = "/about/"
-
-# --- 4. 菜单配置 (必须在 [params] 块之外) ---
-[menu]
-    [[menu.main]]
+# --- 中文配置 (ZH) ---
+[languages.zh-cn]
+    languageName = "ZH" # 按钮上显示的文字
+    title = 'ZHOU PENGLONG | 周鹏龙'
+    weight = 1
+    
+    [languages.zh-cn.params]
+        description = "探索教育创新的边界，分享跨文化视角的思考与沉淀。"
+        
+        [languages.zh-cn.params.profileMode]
+            enabled = true
+            title = "你好，我是周鹏龙。"
+            subtitle = "记录教育观察、个人成长及热爱的一切。"
+            imageUrl = "/images/logo.png"
+            imageWidth = 150
+            [[languages.zh-cn.params.profileMode.buttons]]
+                name = "📚 阅读文章"
+                url = "/posts/"
+            [[languages.zh-cn.params.profileMode.buttons]]
+                name = "🧑‍💻 关于我"
+                url = "/about/"
+                
+    [[languages.zh-cn.menu.main]]
         name = "文章"
         url = "/posts/"
         weight = 10
-    [[menu.main]]
+    [[languages.zh-cn.menu.main]]
         name = "关于"
         url = "/about/"
         weight = 20
 
-# --- 5. 其他设置 ---
-[markup.goldmark.renderer]
-    unsafe = true
+# --- 英文配置 (EN) ---
+[languages.en]
+    languageName = "EN"
+    title = 'ZHOU PENGLONG'
+    weight = 2
+    
+    [languages.en.params]
+        description = "Exploring the boundaries of educational innovation..."
+        
+        [languages.en.params.profileMode]
+            enabled = true
+            title = "Hi, I'm Zhou Penglong."
+            subtitle = "Documenting educational observations and personal growth."
+            imageUrl = "/images/logo.png"
+            imageWidth = 150
+            [[languages.en.params.profileMode.buttons]]
+                name = "📚 Posts"
+                url = "/posts/"
+            [[languages.en.params.profileMode.buttons]]
+                name = "🧑‍💻 About"
+                url = "/about/"
+                
+    [[languages.en.menu.main]]
+        name = "Posts"
+        url = "/posts/"
+        weight = 10
+    [[languages.en.menu.main]]
+        name = "About"
+        url = "/about/"
+        weight = 20

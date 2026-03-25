@@ -5,8 +5,9 @@ hidemeta: true
 showToc: false
 ---
 
-<div class="about-intro">
-  曾穿行于金融行业的繁杂数据与跨境逻辑，后安身于新西兰的教室与讲台。职业身份的更迭，本质上是观察世界视角的转换：从审视资本的流动，到见证认知的生长。
+<div class="about-intro" style="line-height: 1.8; margin-bottom: 3em;">
+  <p>1983 年生于福建泉州，长于永安，现定居新西兰。</p>
+  <p>我曾穿行于金融行业的繁杂数据与跨境逻辑，后安身于南半球的教室与讲台。地理坐标与职业身份的更迭，本质上是观察世界视角的转换：从审视资本的流动，到见证认知的生长。</p>
 </div>
 
 ---
@@ -22,6 +23,20 @@ showToc: false
 
 ---
 
-<div class="photo-caption" style="letter-spacing: 3px; margin-top: 5em;">
+<div style="text-align: center; margin-top: 4em; font-size: 0.9em; color: var(--secondary);">
+  <p>若有探讨与交流，欢迎致信：</p>
+  <a href="#" id="email-link" style="color: var(--primary); text-decoration: none; border-bottom: 1px solid currentColor; padding-bottom: 2px; transition: opacity 0.2s;">contact [at] zhoupenglong.com</a>
+</div>
+
+<div class="photo-caption" style="letter-spacing: 3px; margin-top: 5em; text-align: center;">
   PEDAGOGY · RATIONALITY · COSMOS
 </div>
+
+<script>
+  document.getElementById('email-link').addEventListener('click', function(e) {
+    e.preventDefault(); // 阻止默认的 # 跳转
+    const user = 'contact';
+    const domain = 'zhoupenglong.com';
+    window.location.href = 'mailto:' + user + '@' + domain;
+  });
+</script>

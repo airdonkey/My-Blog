@@ -1,11 +1,251 @@
+- name: "斯里兰卡"
+  lat: 7.8731
+  lng: 80.7718
+  url: "/categories/斯里兰卡/"
+  linkText: "查看游记"
+
+- name: "马尔代夫"
+  lat: 3.2028
+  lng: 73.2207
+  url: "/categories/马尔代夫/"
+  linkText: "查看游记"
+
+- name: "泰国"
+  lat: 15.8700
+  lng: 100.9925
+  url: "/categories/泰国/"
+  linkText: "查看游记"
+
+- name: "土耳其"
+  lat: 38.9637
+  lng: 35.2433
+  url: "/categories/土耳其/"
+  linkText: "查看游记"
+
+- name: "德国"
+  lat: 51.1657
+  lng: 10.4515
+  url: "/categories/德国/"
+  linkText: "查看游记"
+
+- name: "奥地利"
+  lat: 47.5162
+  lng: 14.5501
+  url: "/categories/奥地利/"
+  linkText: "查看游记"
+
+- name: "匈牙利"
+  lat: 47.1625
+  lng: 19.5033
+  url: "/categories/匈牙利/"
+  linkText: "查看游记"
+
+- name: "捷克"
+  lat: 49.8153
+  lng: 15.4730
+  url: "/categories/捷克/"
+  linkText: "查看游记"
+
+- name: "斯洛伐克"
+  lat: 48.6690
+  lng: 19.6990
+  url: "/categories/斯洛伐克/"
+  linkText: "查看游记"
+
+- name: "美国"
+  lat: 37.0902
+  lng: -95.7129
+  url: "/categories/美国/"
+  linkText: "查看游记"
+
+- name: "加拿大"
+  lat: 56.1304
+  lng: -106.3468
+  url: "/categories/加拿大/"
+  linkText: "查看游记"
+
+- name: "意大利"
+  lat: 41.8719
+  lng: 12.5674
+  url: "/categories/意大利/"
+  linkText: "查看游记"
+
+- name: "梵蒂冈"
+  lat: 41.9029
+  lng: 12.4534
+  url: "/categories/梵蒂冈/"
+  linkText: "查看游记"
+
+- name: "西班牙"
+  lat: 40.4637
+  lng: -3.7492
+  url: "/categories/西班牙/"
+  linkText: "查看游记"
+
+- name: "葡萄牙"
+  lat: 39.3999
+  lng: -8.2245
+  url: "/categories/葡萄牙/"
+  linkText: "查看游记"
+
 - name: "新西兰"
   lat: -40.9006
   lng: 174.8860
   url: "/categories/新西兰/"
-  linkText: "查看游记 &rarr;"
+  linkText: "查看游记"
+
+- name: "斐济"
+  lat: -17.7134
+  lng: 178.0650
+  url: "/categories/斐济/"
+  linkText: "查看游记"
+
+- name: "汤加"
+  lat: -21.1790
+  lng: -175.1982
+  url: "/categories/汤加/"
+  linkText: "查看游记"
 
 - name: "乌兹别克斯坦"
   lat: 41.3775
   lng: 64.5853
   url: "/categories/乌兹别克斯坦/"
-  linkText: "查看游记 &rarr;"
+  linkText: "查看游记"
+
+- name: "塔吉克斯坦"
+  lat: 38.8610
+  lng: 71.2761
+  url: "/categories/塔吉克斯坦/"
+  linkText: "查看游记"
+
+- name: "吉尔吉斯斯坦"
+  lat: 41.2044
+  lng: 74.7661
+  url: "/categories/吉尔吉斯斯坦/"
+  linkText: "查看游记"
+
+- name: "哈萨克斯坦"
+  lat: 48.0196
+  lng: 66.9237
+  url: "/categories/哈萨克斯坦/"
+  linkText: "查看游记"
+
+- name: "土库曼斯坦"
+  lat: 38.9697
+  lng: 59.5563
+  url: "/categories/土库曼斯坦/"
+  linkText: "查看游记"
+
+- name: "格鲁吉亚"
+  lat: 42.3154
+  lng: 43.3569
+  url: "/categories/格鲁吉亚/"
+  linkText: "查看游记"
+
+- name: "亚美尼亚"
+  lat: 40.0691
+  lng: 45.0382
+  url: "/categories/亚美尼亚/"
+  linkText: "查看游记"
+
+- name: "俄罗斯"
+  lat: 61.5240
+  lng: 105.3188
+  url: "/categories/俄罗斯/"
+  linkText: "查看游记"
+
+- name: "希腊"
+  lat: 39.0742
+  lng: 21.8243
+  url: "/categories/希腊/"
+  linkText: "查看游记"
+
+- name: "法国"
+  lat: 46.2276
+  lng: 2.2137
+  url: "/categories/法国/"
+  linkText: "查看游记"
+
+- name: "波兰"
+  lat: 51.9194
+  lng: 19.1451
+  url: "/categories/波兰/"
+  linkText: "查看游记"
+
+- name: "立陶宛"
+  lat: 55.1694
+  lng: 23.8813
+  url: "/categories/立陶宛/"
+  linkText: "查看游记"
+
+- name: "拉脱维亚"
+  lat: 56.8796
+  lng: 24.6032
+  url: "/categories/拉脱维亚/"
+  linkText: "查看游记"
+
+- name: "爱沙尼亚"
+  lat: 58.5953
+  lng: 25.0136
+  url: "/categories/爱沙尼亚/"
+  linkText: "查看游记"
+
+- name: "芬兰"
+  lat: 61.9241
+  lng: 25.7482
+  url: "/categories/芬兰/"
+  linkText: "查看游记"
+
+- name: "挪威"
+  lat: 60.4720
+  lng: 8.4689
+  url: "/categories/挪威/"
+  linkText: "查看游记"
+
+- name: "墨西哥"
+  lat: 23.6345
+  lng: -102.5528
+  url: "/categories/墨西哥/"
+  linkText: "查看游记"
+
+- name: "智利"
+  lat: -35.6751
+  lng: -71.5430
+  url: "/categories/智利/"
+  linkText: "查看游记"
+
+- name: "阿根廷"
+  lat: -38.4161
+  lng: -63.6167
+  url: "/categories/阿根廷/"
+  linkText: "查看游记"
+
+- name: "秘鲁"
+  lat: -9.1900
+  lng: -75.0152
+  url: "/categories/秘鲁/"
+  linkText: "查看游记"
+
+- name: "厄瓜多尔"
+  lat: -1.8312
+  lng: -78.1834
+  url: "/categories/厄瓜多尔/"
+  linkText: "查看游记"
+
+- name: "波多黎各"
+  lat: 18.2208
+  lng: -66.5901
+  url: "/categories/波多黎各/"
+  linkText: "查看游记"
+
+- name: "卡塔尔"
+  lat: 25.3548
+  lng: 51.1839
+  url: "/categories/卡塔尔/"
+  linkText: "查看游记"
+
+- name: "荷兰"
+  lat: 52.1326
+  lng: 5.2913
+  url: "/categories/荷兰/"
+  linkText: "查看游记"

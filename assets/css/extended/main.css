@@ -81,3 +81,11 @@ body.dark .profile_inner .profile-img {
 .photo-caption { font-size: 0.85em; text-align: center; color: var(--tertiary) !important; }
 .footer { font-size: 11px; color: var(--tertiary) !important; padding: 2em 0; }
 .footer span:last-child { display: none; }
+
+/* 8. 地图组件样式修复 (去除 Leaflet 弹窗关闭按钮和内部链接的默认下划线) */
+.leaflet-container a.leaflet-popup-close-button,
+.leaflet-container a {
+    border-bottom: none !important;
+    box-shadow: none !important;
+    text-decoration: none !important;
+}

@@ -1,11 +1,251 @@
+- name: "Sri Lanka"
+  lat: 7.8731
+  lng: 80.7718
+  url: "/en/categories/sri-lanka/"
+  linkText: "Read post"
+
+- name: "Maldives"
+  lat: 3.2028
+  lng: 73.2207
+  url: "/en/categories/maldives/"
+  linkText: "Read post"
+
+- name: "Thailand"
+  lat: 15.8700
+  lng: 100.9925
+  url: "/en/categories/thailand/"
+  linkText: "Read post"
+
+- name: "Turkey"
+  lat: 38.9637
+  lng: 35.2433
+  url: "/en/categories/turkey/"
+  linkText: "Read post"
+
+- name: "Germany"
+  lat: 51.1657
+  lng: 10.4515
+  url: "/en/categories/germany/"
+  linkText: "Read post"
+
+- name: "Austria"
+  lat: 47.5162
+  lng: 14.5501
+  url: "/en/categories/austria/"
+  linkText: "Read post"
+
+- name: "Hungary"
+  lat: 47.1625
+  lng: 19.5033
+  url: "/en/categories/hungary/"
+  linkText: "Read post"
+
+- name: "Czechia"
+  lat: 49.8153
+  lng: 15.4730
+  url: "/en/categories/czechia/"
+  linkText: "Read post"
+
+- name: "Slovakia"
+  lat: 48.6690
+  lng: 19.6990
+  url: "/en/categories/slovakia/"
+  linkText: "Read post"
+
+- name: "United States"
+  lat: 37.0902
+  lng: -95.7129
+  url: "/en/categories/united-states/"
+  linkText: "Read post"
+
+- name: "Canada"
+  lat: 56.1304
+  lng: -106.3468
+  url: "/en/categories/canada/"
+  linkText: "Read post"
+
+- name: "Italy"
+  lat: 41.8719
+  lng: 12.5674
+  url: "/en/categories/italy/"
+  linkText: "Read post"
+
+- name: "Vatican City"
+  lat: 41.9029
+  lng: 12.4534
+  url: "/en/categories/vatican-city/"
+  linkText: "Read post"
+
+- name: "Spain"
+  lat: 40.4637
+  lng: -3.7492
+  url: "/en/categories/spain/"
+  linkText: "Read post"
+
+- name: "Portugal"
+  lat: 39.3999
+  lng: -8.2245
+  url: "/en/categories/portugal/"
+  linkText: "Read post"
+
 - name: "New Zealand"
   lat: -40.9006
   lng: 174.8860
   url: "/en/categories/new-zealand/"
-  linkText: "Read post &rarr;"
+  linkText: "Read post"
+
+- name: "Fiji"
+  lat: -17.7134
+  lng: 178.0650
+  url: "/en/categories/fiji/"
+  linkText: "Read post"
+
+- name: "Tonga"
+  lat: -21.1790
+  lng: -175.1982
+  url: "/en/categories/tonga/"
+  linkText: "Read post"
 
 - name: "Uzbekistan"
   lat: 41.3775
   lng: 64.5853
   url: "/en/categories/uzbekistan/"
-  linkText: "Read post &rarr;"
+  linkText: "Read post"
+
+- name: "Tajikistan"
+  lat: 38.8610
+  lng: 71.2761
+  url: "/en/categories/tajikistan/"
+  linkText: "Read post"
+
+- name: "Kyrgyzstan"
+  lat: 41.2044
+  lng: 74.7661
+  url: "/en/categories/kyrgyzstan/"
+  linkText: "Read post"
+
+- name: "Kazakhstan"
+  lat: 48.0196
+  lng: 66.9237
+  url: "/en/categories/kazakhstan/"
+  linkText: "Read post"
+
+- name: "Turkmenistan"
+  lat: 38.9697
+  lng: 59.5563
+  url: "/en/categories/turkmenistan/"
+  linkText: "Read post"
+
+- name: "Georgia"
+  lat: 42.3154
+  lng: 43.3569
+  url: "/en/categories/georgia/"
+  linkText: "Read post"
+
+- name: "Armenia"
+  lat: 40.0691
+  lng: 45.0382
+  url: "/en/categories/armenia/"
+  linkText: "Read post"
+
+- name: "Russia"
+  lat: 61.5240
+  lng: 105.3188
+  url: "/en/categories/russia/"
+  linkText: "Read post"
+
+- name: "Greece"
+  lat: 39.0742
+  lng: 21.8243
+  url: "/en/categories/greece/"
+  linkText: "Read post"
+
+- name: "France"
+  lat: 46.2276
+  lng: 2.2137
+  url: "/en/categories/france/"
+  linkText: "Read post"
+
+- name: "Poland"
+  lat: 51.9194
+  lng: 19.1451
+  url: "/en/categories/poland/"
+  linkText: "Read post"
+
+- name: "Lithuania"
+  lat: 55.1694
+  lng: 23.8813
+  url: "/en/categories/lithuania/"
+  linkText: "Read post"
+
+- name: "Latvia"
+  lat: 56.8796
+  lng: 24.6032
+  url: "/en/categories/latvia/"
+  linkText: "Read post"
+
+- name: "Estonia"
+  lat: 58.5953
+  lng: 25.0136
+  url: "/en/categories/estonia/"
+  linkText: "Read post"
+
+- name: "Finland"
+  lat: 61.9241
+  lng: 25.7482
+  url: "/en/categories/finland/"
+  linkText: "Read post"
+
+- name: "Norway"
+  lat: 60.4720
+  lng: 8.4689
+  url: "/en/categories/norway/"
+  linkText: "Read post"
+
+- name: "Mexico"
+  lat: 23.6345
+  lng: -102.5528
+  url: "/en/categories/mexico/"
+  linkText: "Read post"
+
+- name: "Chile"
+  lat: -35.6751
+  lng: -71.5430
+  url: "/en/categories/chile/"
+  linkText: "Read post"
+
+- name: "Argentina"
+  lat: -38.4161
+  lng: -63.6167
+  url: "/en/categories/argentina/"
+  linkText: "Read post"
+
+- name: "Peru"
+  lat: -9.1900
+  lng: -75.0152
+  url: "/en/categories/peru/"
+  linkText: "Read post"
+
+- name: "Ecuador"
+  lat: -1.8312
+  lng: -78.1834
+  url: "/en/categories/ecuador/"
+  linkText: "Read post"
+
+- name: "Puerto Rico"
+  lat: 18.2208
+  lng: -66.5901
+  url: "/en/categories/puerto-rico/"
+  linkText: "Read post"
+
+- name: "Qatar"
+  lat: 25.3548
+  lng: 51.1839
+  url: "/en/categories/qatar/"
+  linkText: "Read post"
+
+- name: "Netherlands"
+  lat: 52.1326
+  lng: 5.2913
+  url: "/en/categories/netherlands/"
+  linkText: "Read post"

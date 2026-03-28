@@ -1,0 +1,11 @@
+- name: "新西兰"
+  lat: -40.9006
+  lng: 174.8860
+  url: "/categories/新西兰/"
+  linkText: "查看游记 &rarr;"
+
+- name: "乌兹别克斯坦"
+  lat: 41.3775
+  lng: 64.5853
+  url: "/categories/乌兹别克斯坦/"
+  linkText: "查看游记 &rarr;"

@@ -1,0 +1,31 @@
+{{ $dataFileName := .Get "data" }}
+{{ $locations := index .Site.Data $dataFileName }}
+
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" crossorigin=""/>
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" crossorigin=""></script>
+
+<div id="travel-map" style="width: 100%; height: 500px; border-radius: 8px; z-index: 1; margin: 2em 0;"></div>
+
+<script>
+    var map = L.map('travel-map').setView([15.0, 110.0], 3);
+    
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        maxZoom: 18,
+        attribution: '© OpenStreetMap'
+    }).addTo(map);
+
+    // 3. 将 Hugo 后端的数据安全地传递给前端 JavaScript
+    var locations = {{ $locations | jsonify | safeJS }};
+
+    if (locations) {
+        locations.forEach(function(loc) {
+            var marker = L.marker([loc.lat, loc.lng]).addTo(map);
+            // 这里使用了你 main.css 中的 var(--primary) 确保颜色不冲突
+            var popupContent = `<div style="text-align:center; font-family:var(--primary);">
+                                    <b>${loc.name}</b><br>
+                                    <a href="${loc.url}" style="color:#0078D7; text-decoration:none; margin-top:5px; display:inline-block;">${loc.linkText}</a>
+                                </div>`;
+            marker.bindPopup(popupContent);
+        });
+    }
+</script>

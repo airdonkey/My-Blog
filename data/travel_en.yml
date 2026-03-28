@@ -1,0 +1,11 @@
+- name: "New Zealand"
+  lat: -40.9006
+  lng: 174.8860
+  url: "/en/categories/new-zealand/"
+  linkText: "Read post &rarr;"
+
+- name: "Uzbekistan"
+  lat: 41.3775
+  lng: 64.5853
+  url: "/en/categories/uzbekistan/"
+  linkText: "Read post &rarr;"

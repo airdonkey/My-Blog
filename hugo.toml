@@ -48,6 +48,10 @@ copyright = "Zhou Penglong. All Rights Reserved."
         url = "/posts/"
         weight = 10
     [[languages.zh-cn.menu.main]]
+        name = "旅行"
+        url = "/map/"
+        weight = 15
+    [[languages.zh-cn.menu.main]]
         name = "关于"
         url = "/about/"
         weight = 20
@@ -69,16 +73,20 @@ copyright = "Zhou Penglong. All Rights Reserved."
             imageWidth = 150
             [[languages.en.params.profileMode.buttons]]
                 name = "📚 Posts"
-                url = "/en/posts/"   # 这里的 /en/ 路径已修复
+                url = "/en/posts/"
             [[languages.en.params.profileMode.buttons]]
                 name = "🧑‍💻 About"
-                url = "/en/about/"   # 这里的 /en/ 路径已修复
+                url = "/en/about/"
                 
     [[languages.en.menu.main]]
         name = "Posts"
-        url = "/en/posts/"       # 这里的 /en/ 路径已修复
+        url = "/en/posts/"
         weight = 10
     [[languages.en.menu.main]]
+        name = "Travels"
+        url = "/en/map/"
+        weight = 15
+    [[languages.en.menu.main]]
         name = "About"
-        url = "/en/about/"       # 这里的 /en/ 路径已修复
+        url = "/en/about/"
         weight = 20

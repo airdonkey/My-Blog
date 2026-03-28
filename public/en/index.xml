@@ -7,7 +7,46 @@
     <generator>Hugo</generator>
     <language>en</language>
     <copyright>Zhou Penglong. All Rights Reserved.</copyright>
+    <lastBuildDate>Sat, 28 Mar 2026 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://localhost:1313/en/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Travel Map</title>
+      <link>http://localhost:1313/en/map/</link>
+      <pubDate>Sat, 28 Mar 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/en/map/</guid>
+      <description>&lt;p&gt;The world is a book, and those who do not travel read only one page. Click on the pins to read the posts.&lt;/p&gt;
+
+
+
+&lt;link rel=&#34;stylesheet&#34; href=&#34;https://unpkg.com/leaflet@1.9.4/dist/leaflet.css&#34; crossorigin=&#34;&#34;/&gt;
+&lt;script src=&#34;https://unpkg.com/leaflet@1.9.4/dist/leaflet.js&#34; crossorigin=&#34;&#34;&gt;&lt;/script&gt;
+
+&lt;div id=&#34;travel-map&#34; style=&#34;width: 100%; height: 500px; border-radius: 8px; z-index: 1; margin: 2em 0;&#34;&gt;&lt;/div&gt;
+
+&lt;script&gt;
+    var map = L.map(&#39;travel-map&#39;).setView([15.0, 110.0], 3);
+    
+    L.tileLayer(&#39;https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png&#39;, {
+        maxZoom: 18,
+        attribution: &#39;© OpenStreetMap&#39;
+    }).addTo(map);
+
+    
+    var locations = [{&#34;lat&#34;:-40.9006,&#34;linkText&#34;:&#34;Read post \u0026rarr;&#34;,&#34;lng&#34;:174.886,&#34;name&#34;:&#34;New Zealand&#34;,&#34;url&#34;:&#34;/en/categories/new-zealand/&#34;},{&#34;lat&#34;:41.3775,&#34;linkText&#34;:&#34;Read post \u0026rarr;&#34;,&#34;lng&#34;:64.5853,&#34;name&#34;:&#34;Uzbekistan&#34;,&#34;url&#34;:&#34;/en/categories/uzbekistan/&#34;}];
+
+    if (locations) {
+        locations.forEach(function(loc) {
+            var marker = L.marker([loc.lat, loc.lng]).addTo(map);
+            
+            var popupContent = `&lt;div style=&#34;text-align:center; font-family:var(--primary);&#34;&gt;
+                                    &lt;b&gt;${loc.name}&lt;/b&gt;&lt;br&gt;
+                                    &lt;a href=&#34;${loc.url}&#34; style=&#34;color:#0078D7; text-decoration:none; margin-top:5px; display:inline-block;&#34;&gt;${loc.linkText}&lt;/a&gt;
+                                &lt;/div&gt;`;
+            marker.bindPopup(popupContent);
+        });
+    }
+&lt;/script&gt;</description>
+    </item>
     <item>
       <title>About Me</title>
       <link>http://localhost:1313/en/about/</link>

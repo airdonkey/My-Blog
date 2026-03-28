@@ -2,6 +2,32 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>http://localhost:1313/</loc>
+    <lastmod>2026-03-28T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="http://localhost:1313/en/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-cn"
+                href="http://localhost:1313/"
+                />
+  </url><url>
+    <loc>http://localhost:1313/map/</loc>
+    <lastmod>2026-03-28T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="http://localhost:1313/en/map/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-cn"
+                href="http://localhost:1313/map/"
+                />
+  </url><url>
     <loc>http://localhost:1313/categories/</loc>
     <lastmod>2022-10-17T12:00:00+08:00</lastmod>
     <xhtml:link
@@ -29,19 +55,6 @@
                 rel="alternate"
                 hreflang="zh-cn"
                 href="http://localhost:1313/tags/"
-                />
-  </url><url>
-    <loc>http://localhost:1313/</loc>
-    <lastmod>2022-10-17T12:00:00+08:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="http://localhost:1313/en/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh-cn"
-                href="http://localhost:1313/"
                 />
   </url><url>
     <loc>http://localhost:1313/posts/pale-blue-dot/</loc>
